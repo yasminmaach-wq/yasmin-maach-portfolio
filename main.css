@@ -1558,7 +1558,7 @@ button:hover {
 /* ========================= CASE STUDY PAGE ========================= */
 
 .case-study {
-  padding: 25px;
+  padding: clamp(48px, 6vw, 76px) 25px clamp(64px, 7vw, 92px);
   background: #f3f1ee;
   color: #000;
 }
@@ -1567,7 +1567,7 @@ button:hover {
 
 .back-link {
   display: inline-block;
-  margin-bottom: 50px;
+  margin-bottom: 32px;
   text-decoration: none;
   color: #929292;
   font-size: 15px;
@@ -1581,15 +1581,23 @@ button:hover {
 /* Hero  */
 
 .case-hero {
-  align-items: start;
-  margin-bottom: 100px;
+  align-items: center;
+  margin: 0 0 36px;
+  padding: clamp(24px, 4vw, 40px);
+  border: 1px solid #dedbd6;
+  background-color: #fff;
+  --bs-gutter-x: clamp(26px, 5vw, 54px);
 }
 
-.hero-text h1 {
-  font-size: 64px;
+.case-study .hero-text {
+  max-width: 520px;
+}
+
+.case-study .hero-text h1 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
   line-height: 1.1;
   font-weight: 600;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 }
 
 .project-meta {
@@ -1611,110 +1619,102 @@ button:hover {
 }
 
 .hero-image {
-  height: 320px;
+  min-height: 320px;
+  width: 100%;
+  max-width: 460px;
+  aspect-ratio: 1 / 1;
+  margin-left: clamp(42px, 7vw, 112px);
+  margin-right: auto;
   background: #f3f1ee;
-  border: 1px solid #f3f1ee;
+  border: 0;
   position: relative;
   overflow: hidden;
 }
 
-/* X Wireframe Effect */
-.hero-image::before,
-.hero-image::after,
-.case-image::before,
-.case-image::after {
-  content: "";
-  position: absolute;
-  width: 140%;
-  height: 1px;
-  background: #f3f1ee;
-  top: 50%;
-  left: -20%;
-}
-
-.hero-image::before,
-.case-image::before {
-  transform: rotate(24deg);
-}
-
-.hero-image::after,
-.case-image::after {
-  transform: rotate(-24deg);
+.case-study .hero-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.16);
 }
 
 /* Content Rows */
 
 .case-row {
-  align-items: center;
-  margin-bottom: 100px;
+  align-items: stretch;
+  margin: 0 0 18px;
+  --bs-gutter-x: 0;
 }
 
-.case-row.reverse {
-}
-
-/* Image Placeholder */
-
-.case-image {
-  background: #ececec;
-  border: 1px solid #d9d9d9;
-  position: relative;
-  overflow: hidden;
-}
-
-.case-image.small {
-  height: 220px;
-}
-
-.case-image.medium {
-  height: 260px;
+.case-row:last-child {
+  margin-bottom: 0;
 }
 
 /* Content */
 
+.case-content {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.34fr) minmax(0, 1fr);
+  gap: clamp(22px, 4vw, 56px);
+  align-items: start;
+  padding: clamp(24px, 4vw, 38px);
+  border: 1px solid #dedbd6;
+  background-color: #fff;
+}
+
 .case-content h2 {
-  font-size: 34px;
-  margin-bottom: 24px;
+  font-size: clamp(1.45rem, 2.5vw, 2rem);
+  margin: 0;
   font-weight: 600;
+  line-height: 1.12;
 }
 
 .case-content p {
-  font-size: 18px;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.75;
   color: #444;
-  max-width: 560px;
+  max-width: 680px;
+  margin: 0;
 }
 
 .case-content ul {
+  margin: 0;
   padding-left: 18px;
+  columns: 2;
+  column-gap: 34px;
 }
 
 .case-content li {
-  margin-bottom: 14px;
-  font-size: 17px;
-  line-height: 1.7;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  line-height: 1.65;
   color: #444;
+  break-inside: avoid;
 }
 
 /* Responsive */
 
 @media (max-width: 1100px) {
   .case-study {
-    padding: 60px 40px;
+    padding: 52px 32px 70px;
   }
 
-  .hero-text h1 {
+  .case-study .hero-text h1 {
     font-size: 52px;
   }
 }
 
 @media (max-width: 768px) {
   .case-study {
-    padding: 40px 24px;
+    padding: 34px 24px 54px;
   }
 
   .case-hero {
     --bs-gutter-y: 0;
-    margin-bottom: 48px;
+    margin-bottom: 22px;
+    padding: 22px;
   }
 
   .case-hero > * {
@@ -1725,17 +1725,15 @@ button:hover {
     padding-bottom: 0;
   }
 
-  .case-row:not(.reverse) .case-content {
-    order: 1;
-  }
-
-  .case-row:not(.reverse) .case-image {
-    order: 2;
-  }
-
-  .hero-text h1 {
+  .case-study .hero-text h1 {
     font-size: 40px;
     margin-bottom: 12px;
+  }
+
+  .case-content {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 22px;
   }
 
   .case-content h2 {
@@ -1747,15 +1745,8 @@ button:hover {
     font-size: 16px;
   }
 
-  .hero-image {
-    display: none;
-    height: 0;
-    margin-top: 0;
-  }
-
-  .case-image.small,
-  .case-image.medium {
-    height: 220px;
+  .case-content ul {
+    columns: 1;
   }
 
   .project-meta {
@@ -1765,6 +1756,15 @@ button:hover {
 
   .project-meta span:not(:last-child)::after {
     margin-left: 10px;
+  }
+
+  .hero-image {
+    min-height: 220px;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 18px;
   }
 }
 
