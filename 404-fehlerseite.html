@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 | Seite nicht gefunden – Yasmin Maach Studio</title>
+    <meta name="description" content="Diese Seite wurde nicht gefunden. Zurück zum Portfolio von Yasmin Maach Studio für UI/UX Design, Webdesign und digitale Produkte." />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="author" content="Yasmin Maach" />
+    <link rel="canonical" href="https://yasminmaach.com/404-fehlerseite.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="404 | Seite nicht gefunden – Yasmin Maach Studio" />
+    <meta property="og:description" content="Diese Seite wurde nicht gefunden. Zurück zum Portfolio von Yasmin Maach Studio." />
+    <meta property="og:url" content="https://yasminmaach.com/404-fehlerseite.html" />
+    <meta property="og:site_name" content="Yasmin Maach Studio" />
+    <meta property="og:locale" content="de_AT" />
+    <meta name="twitter:card" content="summary" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+
+    <style>
+      .error-page {
+        min-height: 72vh;
+        display: flex;
+        align-items: center;
+        padding: 6rem 0 4rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .error-code {
+        font-size: clamp(5rem, 18vw, 15rem);
+        line-height: 0.85;
+        letter-spacing: -0.08em;
+        margin-bottom: 2rem;
+        opacity: 0.12;
+      }
+
+      .error-content h1 {
+        margin-bottom: 1.5rem;
+      }
+
+      .error-content p {
+        max-width: 720px;
+        margin-bottom: 2rem;
+      }
+
+      .error-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+        align-items: flex-start;
+      }
+
+      .error-link-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.4rem;
+        white-space: nowrap;
+      }
+
+      .error-link {
+        text-decoration: none;
+        color: inherit;
+        font-weight: 700;
+      }
+
+      .error-link:hover {
+        text-decoration: underline;
+      }
+
+      .error-orbit {
+        position: absolute;
+        right: 6vw;
+        bottom: 8vh;
+        width: clamp(160px, 24vw, 340px);
+        height: clamp(160px, 24vw, 340px);
+        border: 1px solid currentColor;
+        border-radius: 50%;
+        opacity: 0.14;
+        pointer-events: none;
+      }
+
+      .error-orbit::before,
+      .error-orbit::after {
+        content: "";
+        position: absolute;
+        border: 1px solid currentColor;
+        border-radius: 50%;
+        inset: 18%;
+      }
+
+      .error-orbit::after {
+        inset: 38%;
+        background: currentColor;
+      }
+
+      @media (max-width: 768px) {
+        .error-page {
+          padding-top: 4rem;
+        }
+
+        .error-actions {
+          align-items: flex-start;
+          gap: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="site-nav" aria-label="Hauptnavigation">
+      <a href="index.html" class="potrait-img-link">
+        <img class="potrait-img" src="/images/Portrait_Yasmin.png" alt="Portrait von UI- und UX-Designerin Yasmin Maach" loading="lazy" />
+        <span>Yasmin Maach. STUDIO</span>
+      </a>
+      <button
+        class="site-nav-toggle"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#main-navigation"
+        aria-controls="main-navigation"
+        aria-expanded="false"
+        aria-label="Navigation umschalten"
+      >
+        <span class="site-nav-icon"></span>
+      </button>
+      <div class="site-nav-menu collapse" id="main-navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="work.html">Projekte</a>
+        <a href="services.html">Services</a>
+        <a href="writing.html">News</a>
+        <a href="contact.html">Kontakt</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="error-page row g-4" aria-labelledby="error-title">
+        <div class="col-12 col-lg-10 error-content">
+          <div class="error-code" aria-hidden="true">404</div>
+          <h1 id="error-title">
+            Diese Seite ist wohl<br />
+            aus dem Raster gefallen.
+          </h1>
+          <div class="header-line"></div>
+          <p>
+            Der Link ist nicht mehr aktuell, wurde verschoben oder existiert nicht. Kein Problem: Von hier findest du schnell zurück zu
+            meinen Projekten, Services oder direkt zum Kontakt.
+          </p>
+
+          <div class="error-actions">
+            <a href="index.html"><button>Zur Startseite</button></a>
+            <div class="error-link-row">
+              <a class="error-link" href="work.html">Projekte ansehen →</a>
+              <a class="error-link" href="contact.html">Kontakt aufnehmen →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="vertical-message">404 – Seite nicht gefunden.</div>
+        <div class="error-orbit" aria-hidden="true"></div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-content">
+      <div class="footer-icons">
+        <a href="https://www.linkedin.com/in/yasmin-maach/" aria-label="LinkedIn Profil von Yasmin Maach">
+          <img src="/Icons/icon-linkedin.png" alt="LinkedIn Profil von Yasmin Maach" />
+        </a>
+        <a href="https://www.instagram.com/yasminmaach/" aria-label="Instagram Profil von Yasmin Maach">
+          <img src="/Icons/icon-instagram.png" alt="Instagram Profil von Yasmin Maach" />
+        </a>
+      </div>
+      <div class="footer-container">
+        <p class="footer-contact">
+          E: design@yasminmaach.com <br />
+          T: +43 699 1060 3456
+        </p>
+        <p class="footer-copyright">© 2026 Yasmin Maach</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer Navigation">
+        <a href="impressum.html">IMPRESSUM</a>
+        <a href="agb.html">AGB</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
