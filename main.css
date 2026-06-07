@@ -2110,6 +2110,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  margin-top: 112px;
 }
 
 .form-row {
@@ -2352,6 +2353,10 @@ button:hover {
 @media (max-width: 768px) {
   .contact-section {
     padding: 60px 24px;
+  }
+
+  .contact-form {
+    margin-top: 0;
   }
 
   .contact-text h1 {

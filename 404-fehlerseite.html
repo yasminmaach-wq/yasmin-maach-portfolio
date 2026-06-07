@@ -28,90 +28,90 @@
 
     <style>
       .error-page {
-        min-height: 72vh;
-        display: flex;
-        align-items: center;
-        padding: 6rem 0 4rem;
-        position: relative;
-        overflow: hidden;
+      min-height: 72vh;
+      display: flex;
+      align-items: center;
+      padding: 6rem 0 4rem;
+      position: relative;
+      overflow: hidden;
       }
 
       .error-code {
-        font-size: clamp(5rem, 18vw, 15rem);
-        line-height: 0.85;
-        letter-spacing: -0.08em;
-        margin-bottom: 2rem;
-        opacity: 0.12;
+      font-size: clamp(5rem, 18vw, 15rem);
+      line-height: 0.85;
+      letter-spacing: -0.08em;
+      margin-bottom: 2rem;
+      opacity: 0.12;
       }
 
       .error-content h1 {
-        margin-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
       }
 
       .error-content p {
-        max-width: 720px;
-        margin-bottom: 2rem;
+      max-width: 720px;
+      margin-bottom: 2rem;
       }
 
       .error-actions {
-        display: flex;
-        flex-direction: column;
-        gap: 0.45rem;
-        align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      align-items: flex-start;
       }
 
       .error-link-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1.4rem;
-        white-space: nowrap;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.4rem;
+      white-space: nowrap;
       }
 
       .error-link {
-        text-decoration: none;
-        color: inherit;
-        font-weight: 700;
+      text-decoration: none;
+      color: inherit;
+      font-weight: 700;
       }
 
       .error-link:hover {
-        text-decoration: underline;
+      text-decoration: underline;
       }
 
       .error-orbit {
-        position: absolute;
-        right: 6vw;
-        bottom: 8vh;
-        width: clamp(160px, 24vw, 340px);
-        height: clamp(160px, 24vw, 340px);
-        border: 1px solid currentColor;
-        border-radius: 50%;
-        opacity: 0.14;
-        pointer-events: none;
+      position: absolute;
+      right: 6vw;
+      bottom: 8vh;
+      width: clamp(160px, 24vw, 340px);
+      height: clamp(160px, 24vw, 340px);
+      border: 1px solid currentColor;
+      border-radius: 50%;
+      opacity: 0.14;
+      pointer-events: none;
       }
 
       .error-orbit::before,
       .error-orbit::after {
-        content: "";
-        position: absolute;
-        border: 1px solid currentColor;
-        border-radius: 50%;
-        inset: 18%;
+      content: "";
+      position: absolute;
+      border: 1px solid currentColor;
+      border-radius: 50%;
+      inset: 18%;
       }
 
       .error-orbit::after {
-        inset: 38%;
-        background: currentColor;
+      inset: 38%;
+      background: currentColor;
       }
 
       @media (max-width: 768px) {
-        .error-page {
-          padding-top: 4rem;
-        }
+      .error-page {
+      padding-top: 4rem;
+      }
 
-        .error-actions {
-          align-items: flex-start;
-          gap: 0.9rem;
-        }
+      .error-actions {
+      align-items: flex-start;
+      gap: 0.9rem;
+      }
       }
     </style>
   </head>
