@@ -1,7 +1,7 @@
 /* =========================GENERALLY =========================*/
 h1 {
   font-family: "Coda", system-ui;
-  animation: headline-reveal 700ms ease-out both;
+  animation: headline-reveal 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 h2 {
   font-family: "Coda", system-ui;
@@ -29,35 +29,6 @@ p {
   font-weight: 400;
 }
 
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-li,
-.project-category,
-.project-tags span,
-.breadcrumb,
-.footer-nav a,
-.footer-copyright {
-  animation: text-soft-reveal 700ms ease-out both;
-}
-
-main p,
-main li {
-  animation-delay: 120ms;
-}
-
-main p a,
-main li a,
-main h2 a,
-main h3 a,
-main .project-link {
-  animation: text-soft-reveal 700ms ease-out both;
-  animation-delay: 160ms;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -76,12 +47,20 @@ body {
   margin-left: auto;
   margin-right: auto;
   border: 1px solid #fff;
-  animation: page-content-reveal 650ms ease-out both;
 }
 
 body.legal-page {
   background-color: #f3f1ee;
   border-color: #f3f1ee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body.contact-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 header,
@@ -243,7 +222,22 @@ header,
 }
 
 .potrait-img-link span {
+  display: inline-block;
   color: #000;
+  transform-origin: center;
+  animation: brand-name-spin 8s ease-in-out infinite;
+}
+
+@keyframes brand-name-spin {
+  0%,
+  74%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  86% {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 1199.98px) {
@@ -349,7 +343,7 @@ header {
   position: relative;
   background-color: #d7e5f6;
   padding: 25px;
-  padding-top: 50px;
+  padding-top: 80px;
 }
 
 h1 {
@@ -361,55 +355,23 @@ h1 {
 @keyframes headline-reveal {
   from {
     opacity: 0;
-    transform: translateY(18px);
+    filter: blur(8px);
+    clip-path: inset(0 100% 0 0);
+    transform: translateX(-18px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes text-soft-reveal {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes page-content-reveal {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
+    filter: blur(0);
+    clip-path: inset(0 0 0 0);
+    transform: translateX(0);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  body,
   h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  li,
-  main a,
-  .project-category,
-  .project-tags span,
-  .breadcrumb,
-  .footer-nav a,
-  .footer-copyright,
+  header > .vertical-message,
+  .potrait-img-link span,
   .potrait-img-link::before {
     animation: none;
   }
@@ -462,6 +424,8 @@ header button {
     font-size: 0.9rem;
     font-weight: lighter;
     font-family: "Manrope", sans-serif;
+    width: fit-content;
+    transition: color 0.3s ease, transform 0.3s ease;
 
     margin-top: 40px;
     img {
@@ -473,6 +437,8 @@ header button {
     }
     &:hover {
       cursor: pointer;
+      color: #5D4131;
+      transform: translateX(8px);
     }
   }
 }
@@ -702,6 +668,11 @@ p {
   justify-content: center;
   overflow: visible;
   flex: 0 0 auto;
+  border-radius: 50%;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .footer-icons img {
@@ -709,6 +680,7 @@ p {
   height: 30px;
   display: block;
   object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
 .footer-container {
@@ -759,6 +731,16 @@ p {
 .footer-icons a:hover,
 .footer-nav a:hover {
   color: #000;
+}
+
+.footer-icons a:hover {
+  background-color: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+}
+
+.footer-icons a:hover img {
+  transform: scale(1.08);
 }
 
 @media (max-width: 767.98px) {
@@ -858,6 +840,8 @@ p {
   font-size: 0.9rem;
   font-weight: lighter;
   font-family: "Manrope", sans-serif;
+  width: fit-content;
+  transition: color 0.3s ease, transform 0.3s ease;
 
   margin-top: 40px;
   img {
@@ -869,6 +853,8 @@ p {
   }
   &:hover {
     cursor: pointer;
+    color: #5D4131;
+    transform: translateX(8px);
   }
 }
 
@@ -1077,6 +1063,12 @@ div .skills-section {
 .work-header {
   background: #d7e5f6;
   color: #000;
+}
+
+.work-header .hero-text h1 {
+  font-size: 2.75rem;
+  font-weight: inherit;
+  line-height: normal;
 }
 
 /* Hero */
@@ -1440,12 +1432,11 @@ button:hover {
 /* Approach */
 
 .approach-section {
-  padding: 25px;
+  padding: 64px 25px;
   background-color: #f3f1ee;
   border-top: 1px solid #f3f1ee;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 40px;
 }
 
 .approach-grid {
@@ -1483,7 +1474,7 @@ button:hover {
 @media (max-width: 767.98px) {
   .approach-section {
     display: block;
-    padding: 28px 32px 54px;
+    padding: 54px 32px 72px;
   }
 
   .approach-heading {
@@ -1932,6 +1923,10 @@ button:hover {
   .work-cta-button:hover,
   .project-link:hover,
   .more-projects a:hover,
+  .about-me-link:hover,
+  .mein-weg-link:hover,
+  .footer-icons a:hover,
+  .footer-icons a:hover img,
   button:hover,
   .service-cta-button:hover,
   .contact-form button:hover {
@@ -2070,9 +2065,17 @@ button:hover {
 /* ========================= CONTACT PAGE ========================= */
 
 .contact-section {
+  min-height: 100%;
   padding: 25px;
   padding-top: 90px;
   background: #f3f1ee;
+}
+
+.contact-page main {
+  flex: 1 0 auto;
+  background-color: #f3f1ee;
+  box-shadow: 0 0 0 100vmax #f3f1ee;
+  clip-path: inset(0 -100vmax);
 }
 
 .contact-content {
@@ -2161,6 +2164,7 @@ button:hover {
 /* ========================= LEGAL PAGES ========================= */
 
 .legal-main {
+  flex: 1 0 auto;
   background-color: #f3f1ee;
   padding: 25px;
 }
