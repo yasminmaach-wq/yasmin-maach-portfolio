@@ -5843,6 +5843,12 @@ body.case-page .case-editorial-hero {
   color: #fff;
 }
 
+/* Keep the scrolling labels above the floating animation. */
+.services-intro .projects-content {
+  position: relative;
+  z-index: 40;
+}
+
 /* On desktop, the dark intro (navigation, hero and marquee) ends with the first viewport. */
 @media (min-width: 992px) {
   .services-hero {
