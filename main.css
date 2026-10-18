@@ -3669,7 +3669,9 @@ div .skills-section {
 
   .services-hero-animation {
     right: -54px;
-    bottom: -140px;
+    /* Let the animation overlap the mobile marquee instead of stopping above it. */
+    bottom: -210px;
+    z-index: 1000;
   }
 }
 
