@@ -4087,6 +4087,37 @@ button:hover,
   transition: background-color 280ms ease, color 280ms ease, border-color 280ms ease, transform 280ms ease;
 }
 
+.process-step::after {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 8px;
+  height: 8px;
+  content: "";
+  pointer-events: none;
+  opacity: 0;
+  background: #000;
+  border-radius: 50%;
+  transform: scale(0.4);
+  transition: opacity 220ms ease, transform 220ms ease, background-color 220ms ease;
+}
+
+.process-step.is-active::after {
+  opacity: 1;
+  transform: scale(1);
+  animation: process-active-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes process-active-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgb(0 0 0 / 42%);
+  }
+
+  55% {
+    box-shadow: 0 0 0 8px rgb(0 0 0 / 0%);
+  }
+}
+
 .process-step p {
   margin: 0;
   transition: color 280ms ease;
@@ -4109,9 +4140,20 @@ button:hover,
     transform-origin: left top;
   }
 
+  .process-step.is-active:hover::after,
+  .process-step.is-active:focus-within::after {
+    background: #fff;
+  }
+
   .process-step:hover p,
   .process-step:focus-within p {
     color: rgb(255 255 255 / 82%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .process-step.is-active::after {
+    animation: none;
   }
 }
 
