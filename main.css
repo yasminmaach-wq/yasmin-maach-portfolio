@@ -3586,7 +3586,8 @@ div .skills-section {
 .services-hero-animation {
   top: auto;
   right: -4%;
-  bottom: 32px;
+  /* Anchor in the middle of the marquee so it is always visible while overlapping the text. */
+  bottom: 160px;
   width: clamp(400px, 36vw, 570px);
   /* This is a direct sibling of the marquee, so it always paints above it. */
   z-index: 1000;
@@ -3674,7 +3675,7 @@ div .skills-section {
 
   .services-hero-animation {
     right: -54px;
-    bottom: 32px;
+    bottom: 160px;
     z-index: 1000;
   }
 }
