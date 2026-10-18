@@ -3545,6 +3545,11 @@ div .skills-section {
 
 /* Hero */
 
+.services-intro {
+  position: relative;
+  isolation: isolate;
+}
+
 .services-hero {
   position: relative;
   z-index: 30;
@@ -3581,10 +3586,10 @@ div .skills-section {
 .services-hero-animation {
   top: auto;
   right: -4%;
-  bottom: -18%;
+  bottom: 32px;
   width: clamp(400px, 36vw, 570px);
-  /* The animation deliberately overlaps the marquee below the hero. */
-  z-index: 100;
+  /* This is a direct sibling of the marquee, so it always paints above it. */
+  z-index: 1000;
   pointer-events: none;
   transform: translate(0, 0) rotate(-4deg);
   animation: services-hero-animation-float 13s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
@@ -3669,8 +3674,7 @@ div .skills-section {
 
   .services-hero-animation {
     right: -54px;
-    /* Let the animation overlap the mobile marquee instead of stopping above it. */
-    bottom: -210px;
+    bottom: 32px;
     z-index: 1000;
   }
 }
