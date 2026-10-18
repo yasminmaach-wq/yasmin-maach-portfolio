@@ -1909,6 +1909,7 @@ h1 {
   font-weight: 400;
   line-height: 1.25;
   letter-spacing: -0.02em;
+  word-spacing: 0.26em;
 }
 
 @keyframes headline-reveal {
