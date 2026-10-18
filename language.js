@@ -210,14 +210,6 @@
     renderHeroContrastText(heroSignatureMeta, heroSignatureMeta.textContent.trim());
   }
 
-  // On Services, the moving headline uses the same per-character contrast
-  // effect as the Home hero whenever the animation passes behind it.
-  if (document.body.classList.contains("services-page")) {
-    document.querySelectorAll(".projects-marquee-group > span").forEach((label) => {
-      renderHeroContrastText(label, label.textContent.trim());
-    });
-  }
-
   const updateHeroTextContrast = (canvas) => {
     const characters = document.querySelectorAll(".hero-contrast-char");
     if (!canvas || !characters.length || !canvas.width || !canvas.height) return;
