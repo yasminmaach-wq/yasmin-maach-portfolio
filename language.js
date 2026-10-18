@@ -192,6 +192,7 @@
       Array.from(part).forEach((character) => {
         const characterSpan = document.createElement("span");
         characterSpan.className = "hero-contrast-char";
+        characterSpan.dataset.character = character;
         characterSpan.textContent = character;
         word.append(characterSpan);
       });
@@ -218,6 +219,9 @@
     });
   }
 
+  let servicesAnimationMask = "";
+  let servicesMaskUpdatedAt = 0;
+
   const updateHeroTextContrast = (canvas) => {
     const characters = document.querySelectorAll(".hero-contrast-char");
     if (!canvas || !characters.length || !canvas.width || !canvas.height) return;
@@ -225,6 +229,16 @@
     const context = canvas.getContext("2d", { willReadFrequently: true });
     const canvasStyle = getComputedStyle(canvas);
     const canvasBounds = canvas.getBoundingClientRect();
+    const usePartialServicesMask = document.body.classList.contains("services-page");
+
+    if (usePartialServicesMask && performance.now() - servicesMaskUpdatedAt > 80) {
+      try {
+        servicesAnimationMask = canvas.toDataURL("image/png");
+        servicesMaskUpdatedAt = performance.now();
+      } catch (_) {
+        servicesAnimationMask = "";
+      }
+    }
     const localWidth = canvas.offsetWidth || canvasBounds.width;
     const localHeight = canvas.offsetHeight || canvasBounds.height;
     const [originX = localWidth / 2, originY = localHeight / 2] = canvasStyle.transformOrigin
@@ -273,6 +287,17 @@
 
     characters.forEach((character) => {
       const bounds = character.getBoundingClientRect();
+
+      if (usePartialServicesMask && servicesAnimationMask) {
+        character.style.setProperty("--animation-mask", `url("${servicesAnimationMask}")`);
+        character.style.setProperty("--animation-mask-width", `${canvasBounds.width}px`);
+        character.style.setProperty("--animation-mask-height", `${canvasBounds.height}px`);
+        character.style.setProperty("--animation-mask-x", `${canvasBounds.left - bounds.left}px`);
+        character.style.setProperty("--animation-mask-y", `${canvasBounds.top - bounds.top}px`);
+        character.classList.remove("is-over-animation");
+        return;
+      }
+
       const isCovered = animationCoversPoint(
         bounds.left + bounds.width / 2,
         bounds.top + bounds.height / 2,
