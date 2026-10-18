@@ -5826,7 +5826,6 @@ body.case-page .case-editorial-hero {
   background: #000;
   color: #fff;
   box-shadow: 0 0 0 100vmax #000;
-  clip-path: inset(0 -100vmax);
 }
 
 .services-intro .services-hero,
