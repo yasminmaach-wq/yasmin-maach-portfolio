@@ -5849,6 +5849,14 @@ body.case-page .case-editorial-hero {
   z-index: 40;
 }
 
+.services-intro .projects-marquee,
+.services-intro .projects-marquee-track,
+.services-intro .projects-marquee-group,
+.services-intro .projects-marquee-group > span {
+  position: relative;
+  z-index: 50;
+}
+
 /* On desktop, the dark intro (navigation, hero and marquee) ends with the first viewport. */
 @media (min-width: 992px) {
   .services-hero {
