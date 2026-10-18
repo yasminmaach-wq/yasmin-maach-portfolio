@@ -2210,23 +2210,23 @@ p {
 @keyframes hero-animation-float {
   0%,
   100% {
-    transform: translateY(22%) translate(0, 0) rotate(-4deg);
+    transform: translateY(22%) translate(0, 0) translate(var(--service-motion-x, 0px), var(--service-motion-y, 0px)) rotate(-4deg);
   }
 
   16% {
-    transform: translateY(calc(22% - 22px)) translate(-34px, 4px) rotate(3deg);
+    transform: translateY(calc(22% - 22px)) translate(-34px, 4px) translate(var(--service-motion-x, 0px), var(--service-motion-y, 0px)) rotate(3deg);
   }
 
   37% {
-    transform: translateY(calc(22% - 38px)) translate(-84px, -5px) rotate(7deg);
+    transform: translateY(calc(22% - 38px)) translate(-84px, -5px) translate(var(--service-motion-x, 0px), var(--service-motion-y, 0px)) rotate(7deg);
   }
 
   58% {
-    transform: translateY(calc(22% - 12px)) translate(-52px, 10px) rotate(-2deg);
+    transform: translateY(calc(22% - 12px)) translate(-52px, 10px) translate(var(--service-motion-x, 0px), var(--service-motion-y, 0px)) rotate(-2deg);
   }
 
   79% {
-    transform: translateY(calc(22% - 30px)) translate(-16px, -8px) rotate(4deg);
+    transform: translateY(calc(22% - 30px)) translate(-16px, -8px) translate(var(--service-motion-x, 0px), var(--service-motion-y, 0px)) rotate(4deg);
   }
 }
 
