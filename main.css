@@ -5820,6 +5820,30 @@ body.case-page .case-editorial-hero {
   color: #fff;
 }
 
+/* The Services hero and marquee share one continuous dark canvas. */
+.services-intro {
+  position: relative;
+  background: #000;
+  color: #fff;
+  box-shadow: 0 0 0 100vmax #000;
+  clip-path: inset(0 -100vmax);
+}
+
+.services-intro .services-hero,
+.services-intro .services-hero + .projects-content {
+  background: transparent;
+  box-shadow: none;
+  clip-path: none;
+}
+
+.services-intro .services-hero,
+.services-intro .services-hero h1,
+.services-intro .services-hero p,
+.services-intro .services-hero .page-breadcrumb,
+.services-intro .projects-marquee {
+  color: #fff;
+}
+
 /* On desktop, the dark intro (navigation, hero and marquee) ends with the first viewport. */
 @media (min-width: 992px) {
   .services-hero {
