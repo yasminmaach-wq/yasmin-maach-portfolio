@@ -2164,10 +2164,10 @@ p {
   }
 
   body > header.row.g-3 .vertical-message {
-    /* Auf die vertikale Mitte der mehrzeiligen Überschrift ausgerichtet. */
+    /* Am oberen Navigationsbereich ausgerichtet. */
     left: var(--vertical-message-center, calc(100% - 54px));
     right: auto;
-    top: 34%;
+    top: 48px;
     bottom: auto;
     transform: translateX(-50%) rotate(180deg);
   }
