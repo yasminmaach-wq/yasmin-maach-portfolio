@@ -1867,26 +1867,7 @@ body > header.row.g-3 .vertical-message {
 }
 
 .hero-contrast-char {
-  position: relative;
-  display: inline-block;
   color: #fff;
-}
-
-.hero-contrast-char::after {
-  position: absolute;
-  inset: 0;
-  content: attr(data-character);
-  color: #000;
-  line-height: inherit;
-  pointer-events: none;
-  -webkit-mask-image: var(--animation-mask, none);
-  -webkit-mask-size: var(--animation-mask-width, 0) var(--animation-mask-height, 0);
-  -webkit-mask-position: var(--animation-mask-x, 0) var(--animation-mask-y, 0);
-  -webkit-mask-repeat: no-repeat;
-  mask-image: var(--animation-mask, none);
-  mask-size: var(--animation-mask-width, 0) var(--animation-mask-height, 0);
-  mask-position: var(--animation-mask-x, 0) var(--animation-mask-y, 0);
-  mask-repeat: no-repeat;
 }
 
 .hero-contrast-char.is-over-animation {
