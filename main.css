@@ -6251,7 +6251,7 @@ body.case-page .case-editorial-hero h1 span {
     grid-template-columns: minmax(0, 1fr);
     justify-content: end;
     position: absolute;
-    top: var(--about-breadcrumb-top);
+    top: calc(var(--about-breadcrumb-top) + 108px);
     right: 25px;
     width: min(520px, calc(100vw - 50px));
     margin: 0;
