@@ -2060,8 +2060,9 @@ header button {
 
 .about-me-content {
   padding: 25px;
-  background-color: #fff;
-  box-shadow: 0 0 0 100vmax #fff;
+  background-color: #000;
+  color: #fff;
+  box-shadow: 0 0 0 100vmax #000;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -2078,7 +2079,7 @@ header button {
   .about-me-link {
     text-decoration: none;
     display: flex;
-    color: #000;
+    color: #fff;
     font-size: 0.9rem;
     font-weight: lighter;
     font-family: "Manrope", sans-serif;
@@ -2097,7 +2098,7 @@ header button {
     }
     &:hover {
       cursor: pointer;
-      color: #591e21;
+      color: #fff;
       transform: translateX(8px);
     }
   }
@@ -2129,6 +2130,7 @@ p {
   img {
     width: 32px;
     margin-bottom: 14px;
+    filter: invert(1);
   }
 }
 
