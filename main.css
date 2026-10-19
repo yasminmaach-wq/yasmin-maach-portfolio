@@ -1023,7 +1023,7 @@ body.legal-page {
 }
 
 body.about-page {
-  border-color: #000;
+  border: 0;
 }
 
 body.contact-page {
