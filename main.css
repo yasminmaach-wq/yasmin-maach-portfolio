@@ -1015,7 +1015,7 @@ body {
 }
 
 body.legal-page {
-  background-color: #f3f1ee;
+  background-color: #fff;
   border-color: #f3f1ee;
   min-height: 100vh;
   display: flex;
