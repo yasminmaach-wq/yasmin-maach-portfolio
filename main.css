@@ -2939,6 +2939,16 @@ p {
     gap: 38px;
   }
 
+  .about-hero .introduction-container.portrait-only {
+    width: 100%;
+    grid-template-columns: minmax(0, 520px);
+    justify-content: center;
+  }
+
+  .about-hero .portrait-freelancer-frau {
+    width: 100%;
+  }
+
   .portrait-freelancer-frau img,
   .indroduction-content {
     max-width: 640px;
