@@ -3121,6 +3121,9 @@ div .skills-section {
   width: 100%;
   margin: 0;
   padding: clamp(26px, 3vw, 42px);
+  border: 0;
+  outline: 0;
+  box-shadow: none;
   background: #f3f1ee;
   text-align: left;
 }
