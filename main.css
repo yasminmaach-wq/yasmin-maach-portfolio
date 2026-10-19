@@ -1529,7 +1529,7 @@ header,
 /* Navigation in Negativ */
 .site-nav,
 .site-nav::before {
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.56);
 }
 
 .site-nav a {
@@ -1708,7 +1708,7 @@ body.menu-open {
 
 .language-switcher summary:hover,
 .language-switcher summary:focus-visible {
-  background-color: #151515;
+  background-color: rgba(0, 0, 0, 0.78);
   border-color: #fff;
   transform: translateY(-2px);
 }
