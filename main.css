@@ -5868,6 +5868,10 @@ body.case-page .site-nav {
   border-bottom: 1px solid #000;
 }
 
+.work-page {
+  border-color: #000;
+}
+
 .work-hero-animation {
   right: 0;
   top: auto;
