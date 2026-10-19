@@ -4323,6 +4323,31 @@ button:hover,
 
 }
 
+/* Use the logo's inner edge as the shared text alignment across page headers. */
+:root {
+  --site-inline-gutter: 25px;
+}
+
+body:not(.case-page) .site-nav,
+body.home-page > header.row.g-3,
+body:not(.case-page) main > header,
+body:not(.case-page) main > .contact-section {
+  padding-left: var(--site-inline-gutter);
+  padding-right: var(--site-inline-gutter);
+}
+
+@media (max-width: 1199.98px) {
+  :root {
+    --site-inline-gutter: 32px;
+  }
+}
+
+@media (max-width: 520px) {
+  :root {
+    --site-inline-gutter: 18px;
+  }
+}
+
 @media (max-width: 1199.98px) {
   .process-steps {
     padding-left: 18px;
