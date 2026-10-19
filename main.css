@@ -3045,7 +3045,7 @@ div .skills-section {
 }
 
 .resume-intro-section {
-  padding: clamp(76px, 9vw, 132px) 25px;
+  padding: clamp(76px, 9vw, 132px) var(--site-inline-gutter);
   background-color: #f3f1ee;
   border-top: 1px solid #dedbd6;
   scroll-margin-top: 120px;
@@ -3059,7 +3059,7 @@ div .skills-section {
 
 .resume-intro-section > .resume-intro {
   width: min(100%, 1080px);
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
 }
 
