@@ -2936,6 +2936,10 @@ p {
     gap: 38px;
   }
 
+  .about-hero .portrait-freelancer-frau {
+    left: clamp(0px, 12vw, 92px);
+  }
+
   .portrait-freelancer-frau img,
   .indroduction-content {
     max-width: 640px;
