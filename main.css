@@ -3032,7 +3032,8 @@ div .skills-section {
 }
 
 .skill-column-container {
-  background-color: #f3f1ee;
+  background-color: #000;
+  color: #fff;
 }
 
 .resume-section {
