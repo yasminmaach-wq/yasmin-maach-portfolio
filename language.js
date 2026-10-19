@@ -124,6 +124,7 @@
   }
 
   const verticalMessage = document.querySelector(".vertical-message");
+  const heroHeading = document.querySelector("body > header.row.g-3 > h1");
 
   const alignVerticalMessageWithMenu = () => {
     if (!verticalMessage || !navigationToggle) return;
@@ -136,6 +137,19 @@
 
   window.addEventListener("resize", alignVerticalMessageWithMenu);
   requestAnimationFrame(alignVerticalMessageWithMenu);
+
+  const lockVerticalMessageToHeading = () => {
+    if (!verticalMessage || !heroHeading) return;
+
+    const headingBounds = heroHeading.getBoundingClientRect();
+    const messageBounds = verticalMessage.getBoundingClientRect();
+    const alignedTop = headingBounds.top + headingBounds.height / 2 - messageBounds.height / 2;
+
+    verticalMessage.style.setProperty("--vertical-message-top", `${alignedTop}px`);
+  };
+
+  requestAnimationFrame(lockVerticalMessageToHeading);
+  document.fonts?.ready.then(lockVerticalMessageToHeading);
 
   document.querySelectorAll(".service-card").forEach((card) => {
     const details = card.querySelector(".service-card-details");

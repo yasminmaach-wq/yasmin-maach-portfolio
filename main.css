@@ -2229,7 +2229,7 @@ p {
   position: fixed;
   left: var(--vertical-message-center, calc(100% - 57px));
   right: auto;
-  top: 124px;
+  top: var(--vertical-message-top, 124px);
   translate: 0 0;
   width: auto !important;
   font-size: 0.65rem;
