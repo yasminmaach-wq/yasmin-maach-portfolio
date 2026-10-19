@@ -3044,7 +3044,20 @@ div .skills-section {
   scroll-margin-top: 120px;
 }
 
+.resume-intro-section {
+  padding: clamp(76px, 9vw, 132px) 25px;
+  background-color: #f3f1ee;
+  border-top: 1px solid #dedbd6;
+  scroll-margin-top: 120px;
+}
+
 .resume-section > * {
+  width: min(100%, 1080px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.resume-intro-section > .resume-intro {
   width: min(100%, 1080px);
   margin-left: auto;
   margin-right: auto;
