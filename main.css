@@ -3058,9 +3058,9 @@ div .skills-section {
 }
 
 .resume-intro-section > .resume-intro {
-  width: min(100%, 1080px);
-  margin-left: 0;
-  margin-right: auto;
+  width: 100%;
+  max-width: none;
+  margin: 0;
 }
 
 .resume-intro {
