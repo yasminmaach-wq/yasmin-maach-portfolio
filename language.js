@@ -143,7 +143,11 @@
 
     const headingBounds = heroHeading.getBoundingClientRect();
     const messageBounds = verticalMessage.getBoundingClientRect();
-    const alignedTop = headingBounds.top + headingBounds.height / 2 - messageBounds.height / 2;
+    const currentTop = parseFloat(getComputedStyle(verticalMessage).top);
+    const alignedTop = currentTop + (
+      headingBounds.top + headingBounds.height / 2 -
+      (messageBounds.top + messageBounds.height / 2)
+    );
 
     verticalMessage.style.setProperty("--vertical-message-top", `${alignedTop}px`);
   };
