@@ -951,7 +951,7 @@ select {
   border-radius: 50%;
   background: #fff;
   color: #000;
-  mix-blend-mode: difference;
+  mix-blend-mode: normal;
   opacity: 0;
   pointer-events: none;
   transform: translate(-50%, -50%);
