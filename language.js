@@ -67,12 +67,14 @@
   const siteNavigation = document.querySelector(".site-nav");
   const languageSwitcher = siteNavigation?.querySelector(".language-switcher");
 
-  if (siteNavigation && languageSwitcher && !siteNavigation.querySelector(".nav-cta")) {
+  const navActionReference = languageSwitcher || siteNavigation?.querySelector(".site-nav-toggle");
+
+  if (siteNavigation && navActionReference && !siteNavigation.querySelector(".nav-cta")) {
     const navCta = document.createElement("a");
     navCta.className = "nav-cta";
     navCta.href = "contact.html";
     navCta.textContent = "Get in touch";
-    languageSwitcher.before(navCta);
+    navActionReference.before(navCta);
   }
 
   const navigation = document.querySelector("#main-navigation");

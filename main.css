@@ -5864,6 +5864,10 @@ body.case-page .site-nav {
   clip-path: none;
 }
 
+.work-page .site-nav {
+  border-bottom: 1px solid #000;
+}
+
 .work-hero-animation {
   right: 0;
   top: auto;
