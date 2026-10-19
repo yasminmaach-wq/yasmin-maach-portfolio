@@ -1687,11 +1687,12 @@ body.menu-open {
 
 /* Die Sprachwahl sitzt als sekundäre Aktion direkt unter dem Menübutton. */
 .site-nav > .language-switcher {
-  position: absolute;
+  position: fixed;
   top: 84px;
   right: 25px;
   z-index: 4;
   margin: 0;
+  will-change: transform;
 }
 
 .language-switcher summary {
@@ -1701,7 +1702,7 @@ body.menu-open {
   justify-content: center;
   gap: 0;
   border-color: #fff;
-  background-color: rgba(0, 0, 0, 0.56);
+  background-color: rgba(0, 0, 0, 0.32);
   color: #fff;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
