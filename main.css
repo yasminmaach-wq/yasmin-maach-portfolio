@@ -1900,12 +1900,12 @@ body > header.row.g-3 p {
 
 body > header.row.g-3 > h1 {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 25px;
   right: clamp(72px, 8vw, 130px);
   width: auto;
   margin: 0;
-  translate: 0 calc(-50% + var(--hero-heading-center-offset, 0px));
+  translate: 0 -50%;
 }
 
 body > header.row.g-3 .vertical-message {
