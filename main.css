@@ -1685,12 +1685,12 @@ body.menu-open {
   z-index: 3;
 }
 
-/* Die Sprachwahl sitzt als sekundäre Aktion direkt unter dem Menübutton. */
-.site-nav > .language-switcher {
+/* Die Sprachwahl ist Teil des Startseiten-Headers, unterhalb des Menübuttons. */
+body.home-page > header.row.g-3 > .language-switcher {
   position: fixed;
   top: 84px;
   right: 25px;
-  z-index: 4;
+  z-index: 1001;
   margin: 0;
   will-change: transform;
 }
@@ -1725,13 +1725,13 @@ body.menu-open {
 }
 
 @media (max-width: 1199.98px) {
-  .site-nav > .language-switcher {
+  body.home-page > header.row.g-3 > .language-switcher {
     right: 32px;
   }
 }
 
 @media (max-width: 767.98px) {
-  .site-nav > .language-switcher {
+  body.home-page > header.row.g-3 > .language-switcher {
     right: 32px;
   }
 }
