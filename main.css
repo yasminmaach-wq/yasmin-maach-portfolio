@@ -1029,7 +1029,10 @@ body.contact-page {
   flex-direction: column;
 }
 
-html:has(body.work-page),
+html:has(body.work-page) {
+  background: #000;
+}
+
 body.work-page {
   background: #fff;
 }
