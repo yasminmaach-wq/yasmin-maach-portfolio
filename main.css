@@ -2874,7 +2874,10 @@ p {
 
 @media (prefers-reduced-motion: reduce) {
   .portrait-freelancer-frau,
-  .about-portrait-link-label {
+  .about-portrait-link-label,
+  .about-scroll-link,
+  .about-scroll-link::after,
+  .about-scroll-link span {
     transition: none;
   }
 
@@ -3100,6 +3103,50 @@ div .skills-section {
 
 .about-hero-facts dt {
   color: rgb(255 255 255 / 0.62);
+}
+
+.about-scroll-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  color: inherit;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.about-scroll-link::after {
+  width: 0;
+  height: 1px;
+  background: currentcolor;
+  content: "";
+  transition: width 220ms ease;
+}
+
+.about-scroll-link span {
+  display: inline-block;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.82em;
+  transition: transform 220ms ease;
+}
+
+.about-scroll-cue:hover .about-scroll-link,
+.about-scroll-link:focus-visible {
+  color: rgb(255 255 255 / 0.68);
+}
+
+.about-scroll-cue:hover .about-scroll-link::after,
+.about-scroll-link:focus-visible::after {
+  width: 1.5em;
+}
+
+.about-scroll-cue:hover .about-scroll-link span,
+.about-scroll-link:focus-visible span {
+  transform: translateY(5px);
+}
+
+.about-scroll-link:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 6px;
 }
 
 .resume-block {

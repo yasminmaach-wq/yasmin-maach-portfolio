@@ -3,6 +3,7 @@
   const hero = document.querySelector(".about-hero");
   const portrait = document.querySelector(".about-hero .portrait-freelancer-frau");
   const portraitLink = document.querySelector(".about-portrait-link");
+  const scrollCue = document.querySelector(".about-scroll-link");
   const portraitFrame = document.querySelector(".about-hero .introduction-container.portrait-only");
   const breadcrumb = document.querySelector(".about-hero .page-breadcrumb");
   const desktopLayout = window.matchMedia("(min-width: 992px)");
@@ -26,6 +27,17 @@
 
   alignPortraitWithBreadcrumb();
   window.addEventListener("resize", alignPortraitWithBreadcrumb, { passive: true });
+
+  scrollCue?.addEventListener("click", (event) => {
+    const resume = document.querySelector("#lebenslauf");
+    if (!resume) {
+      return;
+    }
+
+    event.preventDefault();
+    resume.scrollIntoView({ behavior: reducedMotion.matches ? "auto" : "smooth", block: "start" });
+    window.history.replaceState(null, "", "#lebenslauf");
+  });
 
   if (!heroLayout || !hero || !portrait || reducedMotion.matches) {
     return;
