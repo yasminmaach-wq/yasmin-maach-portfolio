@@ -6069,11 +6069,25 @@ body.case-page .case-editorial-hero h1 span {
   }
 
   .about-hero {
+    box-sizing: border-box;
+    min-height: calc(100svh - 112px);
     padding-top: calc(var(--overview-hero-heading-offset) - 95px);
+    padding-bottom: clamp(24px, 4vh, 48px);
   }
 
   .about-hero .introduction-container {
     align-items: start;
+  }
+
+  .about-hero .portrait-freelancer-frau {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-hero .portrait-freelancer-frau img {
+    width: auto;
+    max-width: 100%;
+    max-height: calc(100svh - 365px);
   }
 
   .work-header {
