@@ -2976,6 +2976,16 @@ div .skills-section {
   line-height: 1.2;
 }
 
+.about-hero-facts {
+  width: 100%;
+  margin: clamp(24px, 3vw, 40px) 0 0;
+  color: #fff;
+}
+
+.about-hero-facts dt {
+  color: rgb(255 255 255 / 0.62);
+}
+
 .resume-block {
   margin-top: clamp(72px, 9vw, 112px);
 }
@@ -6108,7 +6118,7 @@ body.case-page .case-editorial-hero h1 span {
   .about-hero .portrait-freelancer-frau img {
     width: auto;
     max-width: 100%;
-    max-height: calc(100svh - 270px);
+    max-height: calc(100svh - 400px);
   }
 
   .work-header {
