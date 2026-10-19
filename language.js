@@ -124,6 +124,7 @@
   }
 
   const verticalMessage = document.querySelector(".vertical-message");
+  const heroHeading = document.querySelector("body > header.row.g-3 > h1");
 
   const alignVerticalMessageWithMenu = () => {
     if (!verticalMessage || !navigationToggle) return;
@@ -131,10 +132,23 @@
     const toggleBounds = navigationToggle.getBoundingClientRect();
     const toggleCenter = toggleBounds.left + toggleBounds.width / 2;
     verticalMessage.style.setProperty("--vertical-message-center", `${toggleCenter}px`);
+
+    if (heroHeading) {
+      const headingBounds = heroHeading.getBoundingClientRect();
+      const messageBounds = verticalMessage.getBoundingClientRect();
+      const minimumTop = toggleBounds.bottom + 20;
+      const alignedTop = headingBounds.top + headingBounds.height / 2 - messageBounds.height / 2;
+
+      verticalMessage.style.setProperty(
+        "--vertical-message-top",
+        `${Math.max(minimumTop, alignedTop)}px`,
+      );
+    }
   };
 
   window.addEventListener("resize", alignVerticalMessageWithMenu);
   requestAnimationFrame(alignVerticalMessageWithMenu);
+  document.fonts?.ready.then(alignVerticalMessageWithMenu);
 
   document.querySelectorAll(".service-card").forEach((card) => {
     const details = card.querySelector(".service-card-details");

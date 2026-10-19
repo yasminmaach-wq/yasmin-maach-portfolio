@@ -1900,7 +1900,7 @@ body > header.row.g-3 p {
 
 body > header.row.g-3 > h1 {
   position: absolute;
-  top: 50%;
+  top: 46%;
   left: 25px;
   right: clamp(72px, 8vw, 130px);
   width: auto;
@@ -2229,7 +2229,7 @@ p {
   position: fixed;
   left: var(--vertical-message-center, calc(100% - 57px));
   right: auto;
-  top: 124px;
+  top: var(--vertical-message-top, 124px);
   translate: 0 0;
   width: auto !important;
   font-size: 0.65rem;
