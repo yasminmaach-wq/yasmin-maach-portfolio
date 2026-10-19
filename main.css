@@ -3101,6 +3101,41 @@ div .skills-section {
   max-width: none;
 }
 
+.resume-quote {
+  position: relative;
+  width: min(100%, 760px);
+  margin: clamp(32px, 4vw, 56px) 0 0;
+  padding: clamp(22px, 3vw, 34px) clamp(34px, 5vw, 66px);
+  text-align: center;
+}
+
+.resume-quote::before {
+  position: absolute;
+  inset: 0;
+  border: 1px solid currentcolor;
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+  transform: rotate(-2deg);
+}
+
+.resume-quote blockquote {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: clamp(0.82rem, 1.25vw, 1rem);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.resume-quote figcaption {
+  position: relative;
+  z-index: 1;
+  margin-top: 0.45rem;
+  font-size: clamp(0.62rem, 0.85vw, 0.72rem);
+  line-height: 1.35;
+}
+
 .resume-facts {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
