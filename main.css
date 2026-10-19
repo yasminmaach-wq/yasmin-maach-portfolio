@@ -2235,10 +2235,10 @@ p {
   transform: rotate(180deg);
   writing-mode: vertical-lr;
   display: inline-block;
-  position: absolute;
-  right: 0;
-  top: 40%;
-  translate: 0 -50%;
+  position: fixed;
+  right: 25px;
+  top: 48px;
+  translate: 0 0;
   width: auto !important;
   font-size: 0.65rem;
 }
