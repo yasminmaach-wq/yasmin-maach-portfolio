@@ -1644,6 +1644,13 @@ header,
   box-shadow: none;
 }
 
+.site-nav-toggle:hover,
+.site-nav-toggle:focus-visible {
+  background: #000;
+  color: #fff;
+  border-color: #fff;
+}
+
 .site-nav-menu {
   order: 5;
   flex-basis: 100%;
