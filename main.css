@@ -1687,7 +1687,7 @@ body.menu-open {
 .site-nav > .language-switcher {
   position: absolute;
   top: 84px;
-  right: 112px;
+  right: 81px;
   z-index: 4;
   margin: 0;
 }
@@ -1714,7 +1714,7 @@ body.menu-open {
 
 @media (max-width: 1199.98px) {
   .site-nav > .language-switcher {
-    right: 119px;
+    right: 88px;
   }
 }
 
