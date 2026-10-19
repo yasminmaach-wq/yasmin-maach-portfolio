@@ -3121,8 +3121,9 @@ div .skills-section {
   width: 100%;
   margin: 0;
   padding: clamp(26px, 3vw, 42px);
-  border-left: 2px solid #1f2226;
-  background: rgb(255 255 255 / 0.68);
+  border: 1px solid #dedbd6;
+  border-left: 3px solid #1f2226;
+  background: #fff;
   text-align: left;
 }
 
@@ -3134,20 +3135,30 @@ div .skills-section {
   position: relative;
   z-index: 1;
   margin: 0;
-  font-size: clamp(0.92rem, 1.35vw, 1.12rem);
-  font-weight: 600;
+  font-size: clamp(0.98rem, 1.45vw, 1.2rem);
+  font-weight: 500;
   line-height: 1.35;
+}
+
+.resume-quote-label {
+  margin: 0 0 1.35rem;
+  color: #6b6966;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
 .resume-quote blockquote::before {
   display: block;
-  margin: 0 0 0.2em;
+  margin: 0 0 0.32em;
   color: #1f2226;
   content: "“";
-  font-family: "Coda", sans-serif;
-  font-size: 3.4rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 4rem;
   font-weight: 400;
-  line-height: 0.55;
+  line-height: 0.35;
 }
 
 .resume-quote figcaption {
