@@ -1683,6 +1683,41 @@ body.menu-open {
   z-index: 3;
 }
 
+/* Die Sprachwahl sitzt als sekundäre Aktion direkt unter dem Menübutton. */
+.site-nav > .language-switcher {
+  position: absolute;
+  top: 84px;
+  right: 25px;
+  z-index: 4;
+  margin: 0;
+}
+
+.language-switcher summary {
+  background-color: rgba(0, 0, 0, 0.58);
+  border-color: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.language-switcher summary:hover,
+.language-switcher summary:focus-visible {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-color: #fff;
+}
+
+.language-menu {
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+@media (max-width: 1199.98px) {
+  .site-nav > .language-switcher {
+    right: 32px;
+  }
+}
+
 .site-nav-menu {
   position: fixed;
   inset: 0;
