@@ -1700,15 +1700,15 @@ body.menu-open {
   padding: 0;
   justify-content: center;
   gap: 0;
-  border-color: rgba(255, 255, 255, 0.92);
-  background-color: rgba(255, 255, 255, 0.92);
-  color: #000;
+  border-color: #fff;
+  background-color: #000;
+  color: #fff;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .language-switcher summary:hover,
 .language-switcher summary:focus-visible {
-  background-color: #fff;
+  background-color: #151515;
   border-color: #fff;
   transform: translateY(-2px);
 }
