@@ -12,7 +12,7 @@ h1 {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background: #f3f1ee;
+  background: #fff;
   color: #202428;
 }
 
@@ -3123,7 +3123,7 @@ div .skills-section {
   padding: clamp(26px, 3vw, 42px);
   border: 1px solid #dedbd6;
   border-left: 3px solid #1f2226;
-  background: #fff;
+  background: #f3f1ee;
   text-align: left;
 }
 
