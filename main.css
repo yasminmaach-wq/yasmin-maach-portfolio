@@ -3058,6 +3058,10 @@ div .skills-section {
 }
 
 .resume-intro-section > .resume-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(260px, 0.8fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 96px);
   width: 100%;
   max-width: none;
   margin: 0;
@@ -3101,22 +3105,26 @@ div .skills-section {
   max-width: none;
 }
 
+.resume-copy {
+  min-width: 0;
+}
+
+.resume-copy > p:last-child {
+  max-width: none;
+  margin: 0;
+  font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+  line-height: 1.55;
+}
+
 .resume-quote {
-  position: relative;
-  width: min(100%, 760px);
-  margin: clamp(32px, 4vw, 56px) 0 0;
-  padding: clamp(22px, 3vw, 34px) clamp(34px, 5vw, 66px);
-  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
 
 .resume-quote::before {
-  position: absolute;
-  inset: 0;
-  border: 1px solid currentcolor;
-  border-radius: 50%;
-  content: "";
-  pointer-events: none;
-  transform: rotate(-2deg);
+  display: none;
 }
 
 .resume-quote blockquote {
@@ -3134,6 +3142,13 @@ div .skills-section {
   margin-top: 0.45rem;
   font-size: clamp(0.62rem, 0.85vw, 0.72rem);
   line-height: 1.35;
+}
+
+@media (max-width: 767.98px) {
+  .resume-intro-section > .resume-intro {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
 }
 
 .resume-facts {
