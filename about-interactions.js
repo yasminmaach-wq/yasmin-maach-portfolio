@@ -25,8 +25,22 @@
     portraitFrame.style.setProperty("--about-portrait-top", `${(breadcrumbTop - heroTop).toFixed(2)}px`);
   };
 
+  const alignPortraitWithScrollCue = () => {
+    if (!portraitFrame || !scrollCue) {
+      return;
+    }
+
+    portraitFrame.style.removeProperty("--about-portrait-inline-shift");
+    const portraitBounds = portraitFrame.getBoundingClientRect();
+    const cueBounds = scrollCue.getBoundingClientRect();
+    const shift = cueBounds.left + cueBounds.width / 2 - (portraitBounds.left + portraitBounds.width / 2);
+    portraitFrame.style.setProperty("--about-portrait-inline-shift", `${shift.toFixed(2)}px`);
+  };
+
   alignPortraitWithBreadcrumb();
+  alignPortraitWithScrollCue();
   window.addEventListener("resize", alignPortraitWithBreadcrumb, { passive: true });
+  window.addEventListener("resize", alignPortraitWithScrollCue, { passive: true });
 
   scrollCue?.addEventListener("click", (event) => {
     const resume = document.querySelector("#lebenslauf");

@@ -2744,6 +2744,7 @@ p {
 .introduction-container.portrait-only {
   grid-template-columns: minmax(280px, 520px);
   justify-content: center;
+  translate: var(--about-portrait-inline-shift, 0px) 0;
 }
 
 .introduction-container.portrait-only .portrait-freelancer-frau img {
