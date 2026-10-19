@@ -125,13 +125,18 @@
 
   const verticalMessage = document.querySelector(".vertical-message");
   const heroHeading = document.querySelector("body > header.row.g-3 > h1");
+  const heroHeader = heroHeading?.closest("header");
 
   const alignVerticalMessageWithMenu = () => {
-    if (!verticalMessage || !navigationToggle) return;
+    if (!verticalMessage || !navigationToggle || !heroHeader) return;
 
     const toggleBounds = navigationToggle.getBoundingClientRect();
+    const headerBounds = heroHeader.getBoundingClientRect();
     const toggleCenter = toggleBounds.left + toggleBounds.width / 2;
-    verticalMessage.style.setProperty("--vertical-message-center", `${toggleCenter}px`);
+    verticalMessage.style.setProperty(
+      "--vertical-message-center",
+      `${toggleCenter - headerBounds.left}px`
+    );
 
   };
 
@@ -152,6 +157,7 @@
     verticalMessage.style.setProperty("--vertical-message-top", `${alignedTop}px`);
   };
 
+  window.addEventListener("resize", lockVerticalMessageToHeading);
   requestAnimationFrame(lockVerticalMessageToHeading);
   document.fonts?.ready.then(lockVerticalMessageToHeading);
 
