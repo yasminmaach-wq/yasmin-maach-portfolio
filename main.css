@@ -3102,18 +3102,6 @@ div .skills-section {
   color: rgb(255 255 255 / 0.62);
 }
 
-@media (min-width: 768px) {
-  .about-hero-facts {
-    grid-template-columns: minmax(0, 0.85fr) minmax(0, 0.85fr) minmax(0, 1.3fr);
-    gap: clamp(24px, 4vw, 56px);
-  }
-
-  .about-hero-facts div:last-child dd {
-    font-size: clamp(1rem, 1.6vw, 1.35rem);
-    white-space: nowrap;
-  }
-}
-
 .resume-block {
   margin-top: clamp(72px, 9vw, 112px);
 }
