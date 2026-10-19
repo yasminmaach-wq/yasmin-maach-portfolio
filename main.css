@@ -1030,7 +1030,7 @@ body.contact-page {
 }
 
 html:has(body.work-page) {
-  background: #000;
+  background: #fff;
 }
 
 body.work-page {
