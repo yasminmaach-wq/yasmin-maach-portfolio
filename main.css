@@ -1687,23 +1687,32 @@ body.menu-open {
 .site-nav > .language-switcher {
   position: absolute;
   top: 84px;
-  right: 81px;
+  right: 25px;
   z-index: 4;
   margin: 0;
 }
 
 .language-switcher summary {
-  background-color: rgba(0, 0, 0, 0.58);
-  border-color: rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  width: 44px;
+  min-height: 44px;
+  padding: 0;
+  justify-content: center;
+  gap: 0;
+  border-color: rgba(255, 255, 255, 0.92);
+  background-color: rgba(255, 255, 255, 0.92);
+  color: #000;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .language-switcher summary:hover,
 .language-switcher summary:focus-visible {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #fff;
   border-color: #fff;
+  transform: translateY(-2px);
+}
+
+.language-switcher summary > span:not(.language-globe) {
+  display: none;
 }
 
 .language-menu {
@@ -1714,7 +1723,7 @@ body.menu-open {
 
 @media (max-width: 1199.98px) {
   .site-nav > .language-switcher {
-    right: 88px;
+    right: 32px;
   }
 }
 
