@@ -19,7 +19,7 @@
     <meta name="twitter:image" content="https://maach.studio.com/images/Portrait_Yasmin_Original.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="main.css?v=20261019-01" />
+    <link rel="stylesheet" href="main.css?v=20261019-03" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet">
@@ -336,7 +336,7 @@
             const bounds = hero.getBoundingClientRect();
             const heroCenter = bounds.top + bounds.height / 2;
             const viewportCenter = window.innerHeight / 2;
-            targetY = Math.max(-18, Math.min(18, (viewportCenter - heroCenter) * 0.04));
+            targetY = Math.max(-32, Math.min(32, (viewportCenter - heroCenter) * 0.065));
           };
 
           if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
@@ -346,7 +346,7 @@
               const pointerOffset = isOverHero
                 ? Math.max(-1, Math.min(1, (event.clientX - (bounds.left + bounds.width / 2)) / (bounds.width / 2)))
                 : 0;
-              targetX = pointerOffset * 20;
+              targetX = pointerOffset * 36;
             }, { passive: true });
           }
 
