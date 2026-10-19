@@ -363,8 +363,7 @@
 
     const updateCursorState = (target) => {
       const interactiveElement = target instanceof Element ? target.closest(interactiveSelector) : null;
-      const portraitLink = interactiveElement?.matches(".about-portrait-link");
-      cursor.classList.toggle("is-active", Boolean(interactiveElement) && !portraitLink);
+      cursor.classList.toggle("is-active", Boolean(interactiveElement));
     };
 
     document.addEventListener("pointermove", (event) => {
