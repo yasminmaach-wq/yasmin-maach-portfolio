@@ -1022,6 +1022,10 @@ body.legal-page {
   flex-direction: column;
 }
 
+body.about-page {
+  border-color: #000;
+}
+
 body.contact-page {
   background: #fff;
   min-height: 100vh;
