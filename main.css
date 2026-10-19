@@ -1015,7 +1015,7 @@ body {
 }
 
 body.legal-page {
-  background-color: #fff;
+  background-color: #f3f1ee;
   border-color: #f3f1ee;
   min-height: 100vh;
   display: flex;
@@ -3038,7 +3038,7 @@ div .skills-section {
 
 .resume-section {
   padding: clamp(76px, 9vw, 132px) 25px;
-  background-color: #f3f1ee;
+  background-color: #fff;
   border-top: 1px solid #dedbd6;
   border-bottom: 1px solid #dedbd6;
   scroll-margin-top: 120px;
