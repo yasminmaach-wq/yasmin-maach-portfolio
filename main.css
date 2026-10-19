@@ -6224,7 +6224,9 @@ body.case-page .case-editorial-hero h1 span {
     display: flex;
     flex-direction: column;
     min-height: calc(100svh - 112px);
-    padding-top: calc(var(--overview-hero-heading-offset) - 95px);
+    --about-breadcrumb-top: calc(var(--overview-hero-heading-offset) - 95px);
+    position: relative;
+    padding-top: var(--about-breadcrumb-top);
     padding-bottom: clamp(24px, 4vh, 48px);
   }
 
@@ -6248,8 +6250,11 @@ body.case-page .case-editorial-hero h1 span {
   .about-hero .introduction-container.portrait-only {
     grid-template-columns: minmax(0, 1fr);
     justify-content: end;
-    align-self: start;
-    margin: -102px 0 0;
+    position: absolute;
+    top: var(--about-breadcrumb-top);
+    right: 25px;
+    width: min(520px, calc(100vw - 50px));
+    margin: 0;
   }
 
   .about-hero .portrait-freelancer-frau {
