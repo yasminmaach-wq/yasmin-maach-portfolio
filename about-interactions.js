@@ -1,11 +1,38 @@
 (() => {
   const heroLayout = document.querySelector(".about-hero-layout");
+  const hero = document.querySelector(".about-hero");
   const portrait = document.querySelector(".about-hero .portrait-freelancer-frau");
+  const portraitLink = document.querySelector(".about-portrait-link");
   const title = document.querySelector(".about-hero .career-image-title");
   const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-  if (!heroLayout || !portrait || !title || !finePointer.matches || reducedMotion.matches) {
+  if (!heroLayout || !hero || !portrait || !title || reducedMotion.matches) {
+    return;
+  }
+
+  const revealHero = () => {
+    hero.classList.add("has-scroll-reveal");
+    window.requestAnimationFrame(() => hero.classList.add("is-revealed"));
+  };
+
+  if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          revealHero();
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.12 }
+    );
+
+    revealObserver.observe(hero);
+  } else {
+    revealHero();
+  }
+
+  if (!finePointer.matches) {
     return;
   }
 
@@ -32,4 +59,13 @@
   });
 
   heroLayout.addEventListener("pointerleave", resetOffset);
+
+  portraitLink?.addEventListener("pointermove", (event) => {
+    const bounds = portraitLink.getBoundingClientRect();
+    const x = ((event.clientX - bounds.left) / bounds.width) * 100;
+    const y = ((event.clientY - bounds.top) / bounds.height) * 100;
+
+    portraitLink.style.setProperty("--about-spotlight-x", `${x.toFixed(1)}%`);
+    portraitLink.style.setProperty("--about-spotlight-y", `${y.toFixed(1)}%`);
+  });
 })();
