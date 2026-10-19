@@ -3,8 +3,29 @@
   const hero = document.querySelector(".about-hero");
   const portrait = document.querySelector(".about-hero .portrait-freelancer-frau");
   const portraitLink = document.querySelector(".about-portrait-link");
+  const portraitFrame = document.querySelector(".about-hero .introduction-container.portrait-only");
+  const breadcrumb = document.querySelector(".about-hero .page-breadcrumb");
+  const desktopLayout = window.matchMedia("(min-width: 992px)");
   const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  const alignPortraitWithBreadcrumb = () => {
+    if (!hero || !portraitFrame || !breadcrumb) {
+      return;
+    }
+
+    if (!desktopLayout.matches) {
+      portraitFrame.style.removeProperty("--about-portrait-top");
+      return;
+    }
+
+    const heroTop = hero.getBoundingClientRect().top;
+    const breadcrumbTop = breadcrumb.getBoundingClientRect().top;
+    portraitFrame.style.setProperty("--about-portrait-top", `${(breadcrumbTop - heroTop).toFixed(2)}px`);
+  };
+
+  alignPortraitWithBreadcrumb();
+  window.addEventListener("resize", alignPortraitWithBreadcrumb, { passive: true });
 
   if (!heroLayout || !hero || !portrait || reducedMotion.matches) {
     return;
