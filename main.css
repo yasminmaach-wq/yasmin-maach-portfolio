@@ -1522,7 +1522,7 @@ header,
 
 @media (max-width: 767.98px) {
   .site-nav a.nav-cta {
-    display: none;
+    display: inline-flex;
   }
 }
 
