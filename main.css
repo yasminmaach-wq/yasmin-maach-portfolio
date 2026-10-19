@@ -2220,24 +2220,17 @@ p {
     width: 100%;
   }
 
-  body > header.row.g-3 .vertical-message {
-    /* Am oberen Navigationsbereich ausgerichtet. */
-    left: var(--vertical-message-center, calc(100% - 54px));
-    right: auto;
-    top: 48px;
-    bottom: auto;
-    transform: translateX(-50%) rotate(180deg);
-  }
 }
 
 .vertical-message {
-  transform: rotate(180deg);
+  transform: translateX(-50%) rotate(180deg);
   writing-mode: vertical-lr;
   display: inline-block;
-  position: absolute;
-  right: 0;
-  top: 40%;
-  translate: 0 -50%;
+  position: fixed;
+  left: var(--vertical-message-center, calc(100% - 57px));
+  right: auto;
+  top: 124px;
+  translate: 0 0;
   width: auto !important;
   font-size: 0.65rem;
 }

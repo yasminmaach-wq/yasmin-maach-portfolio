@@ -129,21 +129,9 @@
   const alignVerticalMessageWithMenu = () => {
     if (!verticalMessage || !navigationToggle) return;
 
-    if (!window.matchMedia("(max-width: 767.98px)").matches) {
-      verticalMessage.style.removeProperty("--vertical-message-center");
-      return;
-    }
-
     const toggleBounds = navigationToggle.getBoundingClientRect();
     const toggleCenter = toggleBounds.left + toggleBounds.width / 2;
     verticalMessage.style.setProperty("--vertical-message-center", `${toggleCenter}px`);
-
-    const messageBounds = verticalMessage.getBoundingClientRect();
-    const messageCenter = messageBounds.left + messageBounds.width / 2;
-    verticalMessage.style.setProperty(
-      "--vertical-message-center",
-      `${toggleCenter + (toggleCenter - messageCenter)}px`,
-    );
   };
 
   window.addEventListener("resize", alignVerticalMessageWithMenu);
