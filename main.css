@@ -5126,7 +5126,7 @@ body:not(.case-page) main > .contact-section {
   border-radius: 999px;
   padding: 12px 30px 12px 30px;
   margin: 20px 0 60px 0;
-  border: none;
+  border: 1.5px solid #fff;
   cursor: pointer;
   font-size: 16px;
   transition:
