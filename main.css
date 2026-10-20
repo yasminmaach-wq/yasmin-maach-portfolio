@@ -1550,8 +1550,9 @@ header,
 }
 
 .site-nav a.nav-cta {
-  background-color: #fff;
-  color: #000;
+  border: 1.5px solid #fff;
+  background-color: #000;
+  color: #fff;
 }
 
 .site-nav a.nav-cta:hover,

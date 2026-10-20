@@ -69,7 +69,7 @@
 
   const navActionReference = languageSwitcher || siteNavigation?.querySelector(".site-nav-toggle");
 
-  if (siteNavigation && navActionReference && !document.body.classList.contains("contact-page") && !siteNavigation.querySelector(".nav-cta")) {
+  if (siteNavigation && navActionReference && !siteNavigation.querySelector(".nav-cta")) {
     const navCta = document.createElement("a");
     navCta.className = "nav-cta";
     navCta.href = "contact.html";
