@@ -30,7 +30,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
       <script src="language.js?v=20261020-11" defer></script>
-      <script src="contact-form.js?v=20261020-01" defer></script>
+      <script src="contact-form.js?v=20261020-02" defer></script>
   </head>
   <body class="contact-page">
     <nav class="site-nav" aria-label="Hauptnavigation">
@@ -68,7 +68,8 @@
             <p>Du hast eine Idee?<br />Lass uns darüber sprechen.</p>
           </div>
 
-          <form class="contact-form col-12 col-lg-7" action="index.php" method="POST">
+          <form class="contact-form col-12 col-lg-7" action="https://formspree.io/f/mrpevjda" method="POST">
+            <input id="contact-project-type" type="hidden" name="Projektart" value="" />
             <fieldset class="project-picker">
               <legend>Worum geht es?</legend>
               <div class="project-chips" aria-label="Projektart auswählen">

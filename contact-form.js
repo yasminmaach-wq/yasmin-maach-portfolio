@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!form) return;
 
   const subject = form.querySelector("#contact-subject");
+  const projectType = form.querySelector("#contact-project-type");
   const chips = [...form.querySelectorAll("[data-project-type]")];
   const status = form.querySelector(".form-status");
   const submitButton = form.querySelector('button[type="submit"]');
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       chips.filter((item) => item !== chip).forEach((item) => item.classList.remove("is-selected"));
       subject.value = isSelected ? `Projektanfrage: ${type}` : "";
+      projectType.value = isSelected ? type : "";
       subject.focus();
     });
   });
@@ -33,11 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const response = await fetch(form.action, {
         method: form.method,
         body: new FormData(form),
-        headers: { Accept: "text/plain" },
+        headers: { Accept: "application/json" },
       });
-      const message = await response.text();
 
-      if (!response.ok || !message.includes("Nachricht erfolgreich gesendet.")) {
+      if (!response.ok) {
         throw new Error("Message delivery failed");
       }
 
