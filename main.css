@@ -6307,7 +6307,7 @@ body.case-page .site-nav {
 }
 
 .work-page {
-  border-color: #000;
+  border: 0;
   padding-top: 111px;
 }
 
