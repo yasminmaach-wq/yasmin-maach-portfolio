@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const subject = form.querySelector("#contact-subject");
   const projectType = form.querySelector("#contact-project-type");
+  const projectPicker = form.querySelector(".project-picker");
   const chips = [...form.querySelectorAll("[data-project-type]")];
   const status = form.querySelector(".form-status");
   const submitButton = form.querySelector('button[type="submit"]');
@@ -15,14 +16,25 @@ document.addEventListener("DOMContentLoaded", () => {
       const isSelected = chip.classList.toggle("is-selected");
 
       chips.filter((item) => item !== chip).forEach((item) => item.classList.remove("is-selected"));
+      chips.forEach((item) => item.setAttribute("aria-pressed", String(item.classList.contains("is-selected"))));
       subject.value = isSelected ? `Projektanfrage: ${type}` : "";
       projectType.value = isSelected ? type : "";
+      projectPicker.classList.remove("is-invalid");
       subject.focus();
     });
   });
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
+
+    if (!projectType.value) {
+      projectPicker.classList.add("is-invalid");
+      status.textContent = "Bitte wähle eine Projektart aus.";
+      status.classList.add("is-error");
+      status.hidden = false;
+      chips[0].focus();
+      return;
+    }
 
     if (!form.reportValidity()) return;
 
@@ -44,6 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       form.reset();
       chips.forEach((chip) => chip.classList.remove("is-selected"));
+      chips.forEach((chip) => chip.setAttribute("aria-pressed", "false"));
+      projectPicker.classList.remove("is-invalid");
       status.textContent = "Danke, ich melde mich bald bei dir.";
       status.hidden = false;
     } catch (_) {

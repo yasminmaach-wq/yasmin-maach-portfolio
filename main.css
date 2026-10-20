@@ -5181,6 +5181,10 @@ body.contact-page {
   transform: translateY(-2px);
 }
 
+.project-picker.is-invalid .project-chips button {
+  border-color: #ff9d9d;
+}
+
 .contact-form input,
 .contact-form textarea {
   width: 100%;
