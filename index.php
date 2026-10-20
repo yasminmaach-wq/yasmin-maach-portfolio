@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = htmlspecialchars(trim($_POST["subject"]));
     $message = htmlspecialchars(trim($_POST["message"]));
 
-    $to = "deine-email@domain.de";
+    $to = "design@yasminmaach.com";
 
     $mail_subject = "Neue Kontaktanfrage: " . $subject;
 

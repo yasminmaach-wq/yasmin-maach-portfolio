@@ -30,6 +30,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
       <script src="language.js?v=20261020-11" defer></script>
+      <script src="contact-form.js?v=20261020-01" defer></script>
   </head>
   <body class="contact-page">
     <nav class="site-nav" aria-label="Hauptnavigation">
@@ -68,6 +69,15 @@
           </div>
 
           <form class="contact-form col-12 col-lg-7" action="index.php" method="POST">
+            <fieldset class="project-picker">
+              <legend>Worum geht es?</legend>
+              <div class="project-chips" aria-label="Projektart auswählen">
+                <button type="button" data-project-type="Website">Website</button>
+                <button type="button" data-project-type="Branding">Branding</button>
+                <button type="button" data-project-type="UI/UX">UI/UX</button>
+                <button type="button" data-project-type="Sonstiges">Sonstiges</button>
+              </div>
+            </fieldset>
             <div class="form-row row g-3">
               <div class="col-12 col-md-6">
                 <label class="visually-hidden" for="contact-name">Name</label>
@@ -87,6 +97,7 @@
             <textarea id="contact-message" name="message" placeholder="Nachricht" required></textarea>
 
             <button type="submit">Nachricht senden →</button>
+            <p class="form-status" role="status" aria-live="polite" hidden></p>
           </form>
         </div>
       </header>
