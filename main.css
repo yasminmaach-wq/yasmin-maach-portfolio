@@ -2617,6 +2617,16 @@ p {
   display: block;
 }
 
+.footer-contact a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-contact a:hover,
+.footer-contact a:focus-visible {
+  text-decoration: underline;
+}
+
 .footer-container .footer-copyright {
   position: absolute;
   right: 25px;
