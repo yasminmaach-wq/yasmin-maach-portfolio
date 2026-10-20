@@ -6299,7 +6299,9 @@ body.case-page .site-nav {
 .work-header {
   min-height: 100vh;
   overflow: visible;
-  clip-path: none;
+  /* Die Animation darf über den weißen Projektbereich hinaus sichtbar bleiben. */
+  clip-path: none !important;
+  -webkit-clip-path: none !important;
   position: relative;
   z-index: 20;
 }
