@@ -5098,7 +5098,7 @@ body.contact-page {
 .contact-text p {
   display: grid;
   gap: 8px;
-  margin: clamp(46px, 7vh, 86px) 0 0;
+  margin: calc(clamp(46px, 7vh, 86px) + 20px) 0 0;
   padding-left: 20px;
   border-left: 1px solid rgb(255 255 255 / 48%);
   font-size: 18px;
