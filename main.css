@@ -5096,10 +5096,34 @@ body.contact-page {
 }
 
 .contact-text p {
+  display: grid;
+  gap: 8px;
+  margin: clamp(46px, 7vh, 86px) 0 0;
+  padding-left: 20px;
+  border-left: 1px solid rgb(255 255 255 / 48%);
   font-size: 18px;
-  line-height: 1.8;
-  color: #929292;
+  line-height: 1.45;
+  color: #fff;
   max-width: 500px;
+}
+
+.contact-text .contact-intro-question,
+.contact-text .contact-intro-answer {
+  display: block;
+  margin: 0;
+}
+
+.contact-text .contact-intro-question {
+  color: rgb(255 255 255 / 62%);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.contact-text .contact-intro-answer {
+  font-size: clamp(1.2rem, 1.7vw, 1.55rem);
+  font-weight: 500;
 }
 
 /* Form */
@@ -5421,6 +5445,10 @@ body.contact-page {
 
   .contact-text p {
     font-size: 16px;
+  }
+
+  .contact-text .contact-intro-answer {
+    font-size: 1.2rem;
   }
 }
 
