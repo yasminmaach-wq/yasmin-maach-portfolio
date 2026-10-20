@@ -5132,7 +5132,7 @@ body.contact-page {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  margin-top: 125px;
+  margin-top: 0;
 }
 
 .project-picker {
