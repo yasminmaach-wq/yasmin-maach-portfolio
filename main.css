@@ -5059,6 +5059,10 @@ body:not(.case-page) main > .contact-section {
   clip-path: inset(0 -100vmax);
 }
 
+body.contact-page {
+  border: 0;
+}
+
 .contact-content {
   align-items: start;
 }
