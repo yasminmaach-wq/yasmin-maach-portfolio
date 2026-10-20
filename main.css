@@ -5118,7 +5118,7 @@ body.contact-page {
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .contact-text .contact-intro-answer {
@@ -5147,7 +5147,7 @@ body.contact-page {
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.12em;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .project-chips {
