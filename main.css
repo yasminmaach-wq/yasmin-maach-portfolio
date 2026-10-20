@@ -5087,6 +5087,12 @@ body.contact-page {
   color: #929292;
 }
 
+@media (min-width: 1025px) {
+  .contact-text > span {
+    transform: translateY(120px);
+  }
+}
+
 .contact-text h1 {
   font-size: 58px;
   line-height: 1.1;
