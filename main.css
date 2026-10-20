@@ -6300,6 +6300,14 @@ body.case-page .site-nav {
   min-height: 100vh;
   overflow: visible;
   clip-path: none;
+  position: relative;
+  z-index: 2;
+}
+
+.projects-list-label,
+.projects-list {
+  position: relative;
+  z-index: 1;
 }
 
 .work-page .site-nav {
