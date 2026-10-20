@@ -5089,7 +5089,7 @@ body.contact-page {
 
 @media (min-width: 1025px) {
   .contact-text > span {
-    transform: translateY(120px);
+    transform: translateY(160px);
   }
 }
 
