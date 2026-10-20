@@ -6301,13 +6301,17 @@ body.case-page .site-nav {
   overflow: visible;
   clip-path: none;
   position: relative;
-  z-index: 2;
+  z-index: 20;
+}
+
+.work-header .hero-corner-animation {
+  z-index: 30;
 }
 
 .projects-list-label,
 .projects-list {
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 
 .work-page .site-nav {
