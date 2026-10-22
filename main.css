@@ -6316,6 +6316,26 @@ body.case-page .site-nav {
   z-index: 30 !important;
 }
 
+.work-header .hero-corner-artwork {
+  position: absolute;
+  right: 3%;
+  bottom: -8%;
+  z-index: 30;
+  width: clamp(420px, 42vw, 720px);
+  max-width: 62%;
+  height: auto;
+  pointer-events: none;
+  transform-origin: center;
+  animation: work-hero-artwork-float 13s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+@keyframes work-hero-artwork-float {
+  0%,
+  100% { transform: translate(0, 0) rotate(-3deg); }
+  35% { transform: translate(-28px, -22px) rotate(3deg); }
+  68% { transform: translate(-56px, -8px) rotate(-1deg); }
+}
+
 .projects-list-label,
 .projects-list {
   position: relative;
