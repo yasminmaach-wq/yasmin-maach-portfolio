@@ -6351,10 +6351,10 @@ body.case-page .site-nav {
   padding-top: 0;
 }
 
-/* The projects overview flows directly into its white project canvas. */
+/* Keep the projects header distinct while the project canvas remains white. */
 .work-page .work-header {
-  background: #fff !important;
-  color: #000 !important;
+  background: #000 !important;
+  color: #fff !important;
   box-shadow: none !important;
 }
 
@@ -6362,7 +6362,7 @@ body.case-page .site-nav {
 .work-page .work-header p,
 .work-page .work-header .page-breadcrumb,
 .work-page .work-header .page-breadcrumb a {
-  color: #000 !important;
+  color: #fff !important;
 }
 
 .work-hero-animation {
