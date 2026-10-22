@@ -6590,3 +6590,30 @@ body.case-page .case-editorial-hero h1 span {
 .language-switcher {
   display: none !important;
 }
+
+/* Projects: the animation may overlap the white project canvas. */
+.work-page .work-header {
+  overflow: visible !important;
+  clip-path: none !important;
+  box-shadow: none !important;
+  isolation: isolate;
+}
+
+.work-page .work-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: 50%;
+  width: 100vw;
+  background: #000;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.work-page .work-header .hero-content {
+  z-index: 10;
+}
+
+.work-page .work-header .hero-corner-animation {
+  z-index: 5;
+}
