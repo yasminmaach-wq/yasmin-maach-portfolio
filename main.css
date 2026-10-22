@@ -7054,3 +7054,80 @@ body.case-page .case-editorial-hero h1 span {
     padding-left: 18px;
   }
 }
+
+/* Desktop project opening: media and project narrative share one full-screen scene. */
+@media (min-width: 901px) {
+  .case-study-editorial:not(.case-theme-peak) {
+    display: grid;
+    grid-template-columns: minmax(0, 61%) minmax(360px, 39%);
+    background: #111;
+  }
+
+  .case-study-editorial:not(.case-theme-peak) > .page-breadcrumb {
+    grid-column: 2;
+    grid-row: 1;
+    z-index: 2;
+    align-self: start;
+    margin: 0;
+    padding: 30px 48px 0;
+    color: rgb(255 255 255 / 0.56);
+  }
+
+  .case-study-editorial:not(.case-theme-peak) > .page-breadcrumb a:hover {
+    color: #fff;
+  }
+
+  .case-study-editorial:not(.case-theme-peak) > .case-editorial-hero {
+    grid-column: 2;
+    grid-row: 1;
+    min-height: 100svh;
+    padding: clamp(160px, 18vw, 240px) clamp(36px, 4vw, 68px) 54px;
+    justify-content: center;
+    border: 0;
+    background: #111;
+    color: #fff;
+  }
+
+  .case-study-editorial:not(.case-theme-peak) > .case-editorial-hero .case-editorial-eyebrow,
+  .case-study-editorial:not(.case-theme-peak) > .case-editorial-hero h1 span {
+    color: rgb(255 255 255 / 0.62);
+  }
+
+  .case-study-editorial:not(.case-theme-peak) > .case-editorial-hero h1 {
+    font-size: clamp(3rem, 5.4vw, 6.1rem);
+    line-height: 0.92;
+  }
+
+  .case-study-editorial:not(.case-theme-peak) > .case-editorial-hero .case-editorial-lead {
+    margin-top: clamp(34px, 4vw, 56px);
+    font-size: clamp(1rem, 1.25vw, 1.28rem);
+    line-height: 1.55;
+  }
+
+  .case-study-editorial:not(.case-theme-peak) > .case-editorial-visual:first-of-type {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    min-height: 100svh;
+    margin: 0;
+    border: 0;
+  }
+
+  .case-study-editorial:not(.case-theme-peak) > .case-editorial-visual:first-of-type img {
+    transform: scale(1.001);
+  }
+
+  .case-study-editorial:not(.case-theme-peak) > .case-editorial-intro,
+  .case-study-editorial:not(.case-theme-peak) > .case-editorial-mosaic,
+  .case-study-editorial:not(.case-theme-peak) > .case-editorial-process,
+  .case-study-editorial:not(.case-theme-peak) > .case-editorial-outcome,
+  .case-study-editorial:not(.case-theme-peak) > .case-next-projects {
+    grid-column: 1 / -1;
+  }
+
+  .case-study-editorial:not(.case-theme-peak) > .case-editorial-intro,
+  .case-study-editorial:not(.case-theme-peak) > .case-editorial-mosaic,
+  .case-study-editorial:not(.case-theme-peak) > .case-next-projects {
+    background: #fbfbf8;
+  }
+}
