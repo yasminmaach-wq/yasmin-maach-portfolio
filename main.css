@@ -6475,6 +6475,10 @@ body.case-page .case-editorial-hero {
     min-height: calc(100svh - 272px);
   }
 
+  .services-hero-content {
+    transform: translateY(48px);
+  }
+
   .services-hero + .projects-content {
     box-sizing: border-box;
     display: flex;
