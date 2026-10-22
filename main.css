@@ -6304,6 +6304,8 @@ body.case-page .site-nav {
   z-index: 20;
   display: flex;
   align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .work-header .hero-content {
