@@ -6532,6 +6532,15 @@ body.case-page .case-editorial-hero h1 span {
 
 /* Keep the main headlines on all overview pages aligned with the Home hero. */
 @media (min-width: 992px) {
+  .work-header {
+    min-height: calc(100vh - 111px);
+    height: calc(100vh - 111px);
+  }
+
+  .work-page main > .hero-corner-animation {
+    top: calc(100vh - 111px);
+  }
+
   :root {
     --overview-hero-heading-offset: clamp(150px, 13vw, 190px);
   }
