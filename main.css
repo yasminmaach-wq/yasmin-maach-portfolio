@@ -1920,6 +1920,7 @@ body > header.row.g-3 > h1 {
   right: clamp(72px, 8vw, 130px);
   width: auto;
   margin: 0;
+  font-weight: 800;
   translate: 0 -50%;
 }
 
