@@ -6526,8 +6526,9 @@ body.case-page .case-editorial-hero h1 span {
 /* Keep the main headlines on all overview pages aligned with the Home hero. */
 @media (min-width: 992px) {
   .work-header {
-    min-height: calc(100dvh - 112px);
-    height: calc(100dvh - 112px);
+    /* Navigation is fixed above the hero, so it must not reduce the hero canvas. */
+    min-height: 100dvh;
+    height: 100dvh;
   }
 
   :root {
