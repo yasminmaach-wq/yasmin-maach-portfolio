@@ -3758,7 +3758,7 @@ div .skills-section {
 }
 
 .project-phone-preview {
-  min-height: clamp(300px, 34vw, 460px);
+  min-height: clamp(380px, 37vw, 520px);
   margin: 0;
   padding: clamp(20px, 3vw, 42px);
   display: flex;
@@ -3770,22 +3770,36 @@ div .skills-section {
 }
 
 .project-phone {
-  width: min(39%, 220px);
+  position: relative;
+  width: min(38%, 230px);
   display: block;
-  padding: clamp(4px, 0.55vw, 7px);
-  border: clamp(4px, 0.65vw, 8px) solid #121212;
-  border-radius: clamp(24px, 3vw, 38px);
-  background: #121212;
-  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.22);
+  padding: clamp(3px, 0.45vw, 6px);
+  border: clamp(3px, 0.5vw, 6px) solid #151515;
+  border-radius: clamp(27px, 3.4vw, 43px);
+  background: linear-gradient(115deg, #090909, #2c2c2c 48%, #080808);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.28), inset 0 0 0 1px rgba(255, 255, 255, 0.24);
   overflow: hidden;
 }
 
 .project-phone--left {
-  transform: translateY(clamp(10px, 1.8vw, 26px));
+  transform: translateY(0);
 }
 
 .project-phone--right {
-  transform: translateY(clamp(-26px, -1.8vw, -10px));
+  transform: translateY(0);
+}
+
+.project-phone-island {
+  position: absolute;
+  z-index: 1;
+  top: clamp(8px, 1.1vw, 13px);
+  left: 50%;
+  width: 38%;
+  height: clamp(11px, 1.45vw, 16px);
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: #080808;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.18);
 }
 
 .project-phone video {
@@ -3793,7 +3807,7 @@ div .skills-section {
   aspect-ratio: 888 / 1920;
   display: block;
   object-fit: cover;
-  border-radius: clamp(16px, 2vw, 27px);
+  border-radius: clamp(22px, 2.7vw, 35px);
   background: #dbe4e4;
 }
 
