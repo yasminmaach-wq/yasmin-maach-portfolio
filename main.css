@@ -3868,11 +3868,11 @@ div .skills-section {
 }
 
 .project-tags span {
-  border: 1px solid #000;
+  border: 1px solid #929292;
   border-radius: 999px;
   padding: 9px 18px;
   font-size: 14px;
-  color: #000;
+  color: #929292;
 }
 
 .project-link {
