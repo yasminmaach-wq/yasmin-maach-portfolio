@@ -3767,7 +3767,20 @@ div .skills-section {
   justify-content: center;
   gap: clamp(8px, 1.25vw, 16px);
   overflow: hidden;
+  box-sizing: border-box;
+  border: 2px solid #000;
   background: radial-gradient(circle at 50% 42%, #ffffff 0, #eef3e9 72%);
+}
+
+.project-phone-preview::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0.46) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .project-phone-preview::after {
@@ -3795,6 +3808,10 @@ div .skills-section {
 .project-image a:hover .project-phone-preview::after {
   opacity: 1;
   transform: scale(1);
+}
+
+.project-image a:hover .project-phone-preview::before {
+  opacity: 1;
 }
 
 .project-phone {
