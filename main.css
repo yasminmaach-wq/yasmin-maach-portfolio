@@ -6319,14 +6319,28 @@ body.case-page .site-nav {
 .work-header .hero-corner-artwork {
   position: absolute;
   right: 0;
+  top: auto;
   bottom: 0;
   z-index: 30;
   width: clamp(400px, 36vw, 570px);
   max-width: none;
   height: auto;
+  background: transparent;
   pointer-events: none;
+  object-fit: contain;
+  transform: translateY(22%);
   transform-origin: center;
   animation: hero-animation-float 13s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+@media (max-width: 767.98px) {
+  .work-header .hero-corner-artwork {
+    right: 18px;
+    top: auto;
+    bottom: 0;
+    width: 380px;
+    transform: translateY(22%);
+  }
 }
 
 .projects-list-label,
