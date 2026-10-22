@@ -6362,7 +6362,7 @@ body.case-page .site-nav {
 
 .work-page {
   border: 0;
-  padding-top: 111px;
+  padding-top: 0;
 }
 
 .work-hero-animation {
@@ -6533,12 +6533,12 @@ body.case-page .case-editorial-hero h1 span {
 /* Keep the main headlines on all overview pages aligned with the Home hero. */
 @media (min-width: 992px) {
   .work-header {
-    min-height: calc(100vh - 111px);
-    height: calc(100vh - 111px);
+    min-height: 100dvh;
+    height: 100dvh;
   }
 
   .work-page main > .hero-corner-animation {
-    top: calc(100vh - 111px);
+    top: 100dvh;
   }
 
   :root {
