@@ -6319,9 +6319,9 @@ body.case-page .site-nav {
 .work-header .hero-corner-artwork {
   position: absolute;
   right: 3%;
-  bottom: -8%;
+  bottom: 18%;
   z-index: 30;
-  width: clamp(420px, 42vw, 720px);
+  width: clamp(460px, 42vw, 720px);
   max-width: 62%;
   height: auto;
   pointer-events: none;
