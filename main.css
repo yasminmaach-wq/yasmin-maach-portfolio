@@ -6297,8 +6297,8 @@ body.case-page .site-nav {
 
 /* Position the projects animation at the same hero/section boundary as on Home. */
 .work-header {
-  min-height: 100vh;
-  overflow: visible !important;
+  min-height: calc(100svh - 112px);
+  overflow: hidden !important;
   clip-path: none !important;
   position: relative;
   z-index: 20;
@@ -6314,40 +6314,6 @@ body.case-page .site-nav {
 
 .work-header .hero-corner-animation {
   z-index: 30 !important;
-}
-
-.work-page main {
-  position: relative;
-}
-
-.work-page main > .hero-corner-animation {
-  top: 100vh;
-  bottom: auto;
-  z-index: 50 !important;
-  animation-name: work-hero-overlay-float;
-}
-
-@keyframes work-hero-overlay-float {
-  0%,
-  100% {
-    transform: translateY(-78%) translate(0, 0) translate(var(--service-motion-x, 0px), var(--service-motion-y, 0px)) rotate(-4deg);
-  }
-
-  16% {
-    transform: translateY(calc(-78% - 22px)) translate(-34px, 4px) translate(var(--service-motion-x, 0px), var(--service-motion-y, 0px)) rotate(3deg);
-  }
-
-  37% {
-    transform: translateY(calc(-78% - 38px)) translate(-84px, -5px) translate(var(--service-motion-x, 0px), var(--service-motion-y, 0px)) rotate(7deg);
-  }
-
-  58% {
-    transform: translateY(calc(-78% - 12px)) translate(-52px, 10px) translate(var(--service-motion-x, 0px), var(--service-motion-y, 0px)) rotate(-2deg);
-  }
-
-  79% {
-    transform: translateY(calc(-78% - 30px)) translate(-16px, -8px) translate(var(--service-motion-x, 0px), var(--service-motion-y, 0px)) rotate(4deg);
-  }
 }
 
 .projects-list-label,
@@ -6533,12 +6499,8 @@ body.case-page .case-editorial-hero h1 span {
 /* Keep the main headlines on all overview pages aligned with the Home hero. */
 @media (min-width: 992px) {
   .work-header {
-    min-height: 100dvh;
-    height: 100dvh;
-  }
-
-  .work-page main > .hero-corner-animation {
-    top: 100dvh;
+    min-height: calc(100dvh - 112px);
+    height: calc(100dvh - 112px);
   }
 
   :root {
