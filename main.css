@@ -6348,7 +6348,8 @@ body.case-page .site-nav {
 .work-page .work-header {
   background: #000 !important;
   color: #fff !important;
-  box-shadow: none !important;
+  box-shadow: 0 0 0 100vmax #000 !important;
+  clip-path: inset(0 -100vmax) !important;
 }
 
 .work-page .work-header h1,
