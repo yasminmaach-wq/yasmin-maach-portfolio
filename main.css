@@ -6302,6 +6302,12 @@ body.case-page .site-nav {
   clip-path: none;
   position: relative;
   z-index: 20;
+  display: flex;
+  align-items: center;
+}
+
+.work-header .hero-content {
+  width: 100%;
 }
 
 .work-header .hero-corner-animation {
