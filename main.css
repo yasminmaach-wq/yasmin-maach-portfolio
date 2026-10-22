@@ -6598,3 +6598,8 @@ body.case-page .case-editorial-hero h1 span {
     padding-top: calc(var(--overview-hero-heading-offset) - 46px);
   }
 }
+
+/* The site language is selected automatically; no manual switch is shown. */
+.language-switcher {
+  display: none !important;
+}
