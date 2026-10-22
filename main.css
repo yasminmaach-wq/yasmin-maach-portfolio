@@ -6961,3 +6961,96 @@ body.case-page .case-editorial-hero h1 span {
 .work-page .work-header .hero-corner-animation {
   z-index: 5;
 }
+
+/* Case studies: a focused, image-led editorial rhythm. */
+.case-study-editorial {
+  background: #fbfbf8;
+}
+
+.case-study-editorial:not(.case-theme-peak) .case-editorial-hero {
+  min-height: min(86svh, 960px);
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.case-study-editorial > .case-editorial-visual {
+  width: calc(100% - (2 * var(--case-inline-gutter)));
+  min-height: min(74vw, 940px);
+  margin: 0 var(--case-inline-gutter);
+  padding: 0;
+  border: 1px solid #1a1a1a;
+  background: var(--case-surface);
+}
+
+.case-study-editorial > .case-editorial-visual img {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+  filter: none;
+  transform: scale(1.001);
+  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.case-study-editorial > .case-editorial-visual:hover img {
+  transform: scale(1.045);
+}
+
+.case-editorial-intro {
+  border-top: 1px solid #1a1a1a;
+}
+
+.case-editorial-mosaic figure {
+  border: 1px solid #1a1a1a;
+}
+
+.case-next-projects-list {
+  border-color: #1a1a1a;
+}
+
+.case-next-projects a {
+  position: relative;
+  min-height: 108px;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom-color: #1a1a1a;
+  transition: background-color 0.35s ease, color 0.35s ease, padding 0.35s ease;
+}
+
+.case-next-projects a:nth-child(even) {
+  border-left-color: #1a1a1a;
+}
+
+.case-next-projects a span:last-child {
+  width: 2.1em;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-size: 0.8em;
+  transition: transform 0.35s ease;
+}
+
+.case-next-projects a:hover {
+  padding-left: clamp(20px, 3vw, 48px);
+  background: #111;
+  color: #fff;
+}
+
+.case-next-projects a:hover span:last-child {
+  transform: rotate(45deg);
+}
+
+@media (max-width: 800px) {
+  .case-study-editorial > .case-editorial-visual {
+    width: calc(100% - 40px);
+    min-height: 60svh;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .case-next-projects a:hover {
+    padding-left: 18px;
+  }
+}
