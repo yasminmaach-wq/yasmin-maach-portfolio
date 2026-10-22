@@ -7132,6 +7132,145 @@ body.case-page .case-editorial-hero h1 span {
   }
 }
 
+/* Standalone project details: a focused media-and-story layout. */
+.project-detail-page {
+  margin: 0;
+  background: #11110f;
+  color: #f8f8f3;
+}
+
+.project-detail-page main {
+  min-height: 100svh;
+}
+
+.project-detail {
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: minmax(0, 61%) minmax(360px, 39%);
+  background: #11110f;
+}
+
+.project-detail-media {
+  min-height: 100svh;
+  overflow: hidden;
+  background: var(--project-surface, #efeee9);
+}
+
+.project-detail-media img,
+.project-detail-media video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 700ms cubic-bezier(.2, .7, .2, 1);
+}
+
+.project-detail:hover .project-detail-media img,
+.project-detail:hover .project-detail-media video {
+  transform: scale(1.025);
+}
+
+.project-detail-info {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  padding: clamp(7.5rem, 15vw, 13rem) clamp(2rem, 4vw, 4.25rem) clamp(2.25rem, 4vw, 4rem);
+  background: #11110f;
+}
+
+.project-detail-back {
+  position: absolute;
+  top: 2rem;
+  right: clamp(2rem, 4vw, 4.25rem);
+  color: rgb(255 255 255 / .65);
+  font-size: .76rem;
+  letter-spacing: .08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.project-detail-back:hover,
+.project-detail-next:hover {
+  color: #fff;
+}
+
+.project-detail-kicker {
+  margin: 0;
+  color: rgb(255 255 255 / .58);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.project-detail-title {
+  max-width: 9ch;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.75rem, 5.1vw, 5.75rem);
+  font-weight: 400;
+  line-height: .94;
+  letter-spacing: -.055em;
+}
+
+.project-detail-description {
+  max-width: 34rem;
+  margin: 0;
+  color: rgb(255 255 255 / .72);
+  font-size: clamp(1rem, 1.3vw, 1.25rem);
+  line-height: 1.55;
+}
+
+.project-detail-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgb(255 255 255 / .18);
+}
+
+.project-detail-next {
+  color: #fff;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.project-detail-next:first-child {
+  color: rgb(255 255 255 / .6);
+}
+
+.project-detail--sport { --project-surface: #eee7d9; }
+.project-detail--running { --project-surface: #eaefe4; }
+.project-detail--commerce { --project-surface: #eee8df; }
+.project-detail--peak { --project-surface: #dfe8e0; }
+
+@media (max-width: 900px) {
+  .project-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .project-detail-media {
+    min-height: 58svh;
+  }
+
+  .project-detail-info {
+    position: relative;
+    min-height: auto;
+    padding: 5.75rem 1.5rem 2rem;
+  }
+
+  .project-detail-back {
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
 /* Every Peak uses the same media-left, project-story-right opening. */
 @media (min-width: 901px) {
   .case-theme-peak {
