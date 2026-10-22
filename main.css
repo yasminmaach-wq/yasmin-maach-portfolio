@@ -7217,10 +7217,33 @@ body.case-page .case-editorial-hero h1 span {
 
 .project-detail-description {
   max-width: 34rem;
-  margin: 0;
+  margin: .75rem 0 0;
   color: rgb(255 255 255 / .72);
   font-size: clamp(1rem, 1.3vw, 1.25rem);
   line-height: 1.55;
+}
+
+.project-detail-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1.1rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgb(255 255 255 / .32);
+  color: #fff;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 220ms ease, border-color 220ms ease, color 220ms ease;
+}
+
+.project-detail-cta:hover {
+  border-color: #fff;
+  background: #fff;
+  color: #11110f;
 }
 
 .project-detail-links {
