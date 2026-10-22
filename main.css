@@ -3730,8 +3730,8 @@ div .skills-section {
   border-bottom: 0;
 }
 
-.project-image img,
-.project-image video {
+.project-image > a > img,
+.project-image > a > video {
   width: 100%;
   display: block;
   object-fit: cover;
@@ -3747,14 +3747,54 @@ div .skills-section {
   transition: box-shadow 0.35s ease;
 }
 
-.project-image a:hover img,
-.project-image a:hover video {
+.project-image a:hover > img,
+.project-image a:hover > video {
   filter: brightness(0.96);
   transform: scale(1.06);
 }
 
 .project-image a:hover {
   box-shadow: 0 16px 34px rgba(0, 0, 0, 0.14);
+}
+
+.project-phone-preview {
+  min-height: clamp(300px, 34vw, 460px);
+  margin: 0;
+  padding: clamp(20px, 3vw, 42px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 2.8vw, 38px);
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 42%, #ffffff 0, #eef3e9 72%);
+}
+
+.project-phone {
+  width: min(39%, 220px);
+  display: block;
+  padding: clamp(4px, 0.55vw, 7px);
+  border: clamp(4px, 0.65vw, 8px) solid #121212;
+  border-radius: clamp(24px, 3vw, 38px);
+  background: #121212;
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+}
+
+.project-phone--left {
+  transform: translateY(clamp(10px, 1.8vw, 26px));
+}
+
+.project-phone--right {
+  transform: translateY(clamp(-26px, -1.8vw, -10px));
+}
+
+.project-phone video {
+  width: 100%;
+  aspect-ratio: 888 / 1920;
+  display: block;
+  object-fit: cover;
+  border-radius: clamp(16px, 2vw, 27px);
+  background: #dbe4e4;
 }
 
 .project-content {
