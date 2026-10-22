@@ -3768,7 +3768,7 @@ div .skills-section {
   gap: clamp(8px, 1.25vw, 16px);
   overflow: hidden;
   box-sizing: border-box;
-  border: 2px solid #000;
+  border: 1px solid #000;
   background: radial-gradient(circle at 50% 42%, #ffffff 0, #eef3e9 72%);
 }
 
