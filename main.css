@@ -3767,9 +3767,6 @@ div .skills-section {
   gap: clamp(8px, 1.4vw, 18px);
   overflow: hidden;
   background: radial-gradient(circle at 50% 42%, #ffffff 0, #eef3e9 72%);
-  transition: background-size 0.45s ease, background-position 0.45s ease;
-  background-size: 100% 100%;
-  background-position: center;
 }
 
 .project-phone {
@@ -3782,7 +3779,6 @@ div .skills-section {
   background: linear-gradient(115deg, #090909, #2c2c2c 48%, #080808);
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.28), inset 0 0 0 1px rgba(255, 255, 255, 0.24);
   overflow: hidden;
-  transition: transform 0.45s cubic-bezier(.2, .8, .2, 1), box-shadow 0.45s ease;
 }
 
 .project-phone--left {
@@ -3820,27 +3816,6 @@ div .skills-section {
   height: auto;
   display: block;
   filter: drop-shadow(0 8px 10px rgba(24, 55, 52, 0.18));
-  transition: transform 0.45s cubic-bezier(.2, .8, .2, 1), filter 0.45s ease;
-}
-
-.project-image a:hover .project-phone-preview {
-  background-size: 125% 125%;
-  background-position: 50% 44%;
-}
-
-.project-image a:hover .project-phone--left {
-  transform: translate(-7%, -4%) rotate(-4deg);
-  box-shadow: 0 28px 40px rgba(0, 0, 0, 0.32), inset 0 0 0 1px rgba(255, 255, 255, 0.24);
-}
-
-.project-image a:hover .project-phone--right {
-  transform: translate(7%, -4%) rotate(4deg);
-  box-shadow: 0 28px 40px rgba(0, 0, 0, 0.32), inset 0 0 0 1px rgba(255, 255, 255, 0.24);
-}
-
-.project-image a:hover .project-phone-logo {
-  transform: scale(1.08);
-  filter: drop-shadow(0 12px 14px rgba(24, 55, 52, 0.24));
 }
 
 .project-content {
@@ -4972,9 +4947,6 @@ body:not(.case-page) main > .contact-section {
 @media (prefers-reduced-motion: reduce) {
   .projects-content .project-container > a img,
   .project-image img,
-  .project-phone,
-  .project-phone-logo,
-  .project-phone-preview,
   .project-card img,
   .case-study .hero-image img {
     transition: none;
