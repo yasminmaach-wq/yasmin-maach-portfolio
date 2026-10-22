@@ -6485,7 +6485,7 @@ body.case-page .case-editorial-hero h1 span {
 
 @media (max-width: 767.98px) {
   .work-header {
-    min-height: 100vh;
+    min-height: calc(100svh - 112px);
     padding-bottom: 0;
   }
 
