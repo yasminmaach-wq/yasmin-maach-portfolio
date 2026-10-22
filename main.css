@@ -5721,7 +5721,7 @@ body.case-page .site-nav {
 .projects-list-label {
   display: block;
   margin: 0;
-  padding: 0 25px 18px;
+  padding: clamp(72px, 7vw, 112px) 25px 18px;
 }
 
 .projects-list-label .sort {
@@ -5757,7 +5757,7 @@ body.case-page .site-nav {
   }
 
   .projects-list-label {
-    padding: 0 24px 16px;
+    padding: 56px 24px 16px;
   }
 }
 
