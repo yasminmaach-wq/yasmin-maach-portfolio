@@ -49,7 +49,7 @@
 
   const brandName = document.querySelector(".potrait-img-link > span");
   if (brandName && !brandName.classList.contains("brand-wordmark")) {
-    const brandText = brandName.textContent.trim().toUpperCase();
+    const brandText = brandName.textContent.trim().toUpperCase().replace(".", "•");
     brandName.classList.add("brand-wordmark");
     brandName.setAttribute("aria-label", brandText);
     brandName.textContent = "";
