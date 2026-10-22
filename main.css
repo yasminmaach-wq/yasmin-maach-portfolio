@@ -3764,14 +3764,14 @@ div .skills-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(14px, 2.8vw, 38px);
+  gap: clamp(8px, 1.4vw, 18px);
   overflow: hidden;
   background: radial-gradient(circle at 50% 42%, #ffffff 0, #eef3e9 72%);
 }
 
 .project-phone {
   position: relative;
-  width: min(38%, 230px);
+  width: min(32%, 195px);
   display: block;
   padding: clamp(3px, 0.45vw, 6px);
   border: clamp(3px, 0.5vw, 6px) solid #151515;
@@ -3809,6 +3809,13 @@ div .skills-section {
   object-fit: cover;
   border-radius: clamp(22px, 2.7vw, 35px);
   background: #dbe4e4;
+}
+
+.project-phone-logo {
+  width: min(24%, 135px);
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 8px 10px rgba(24, 55, 52, 0.18));
 }
 
 .project-content {
