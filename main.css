@@ -3818,6 +3818,11 @@ div .skills-section {
   overflow: hidden;
   box-sizing: border-box;
   background: radial-gradient(circle at 50% 42%, #ffffff 0, #eef3e9 72%);
+  transition: transform 0.35s ease;
+}
+
+.project-image > a:hover .project-phone-preview {
+  transform: scale(1.06);
 }
 
 .project-phone {
