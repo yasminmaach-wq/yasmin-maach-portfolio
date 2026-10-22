@@ -6669,6 +6669,7 @@ body.case-page .case-editorial-hero {
   width: 100%;
   max-width: none;
   height: 100%;
+  margin-top: 0;
   padding: 0;
 }
 
