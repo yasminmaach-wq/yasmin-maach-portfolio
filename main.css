@@ -7131,3 +7131,76 @@ body.case-page .case-editorial-hero h1 span {
     background: #fbfbf8;
   }
 }
+
+/* Every Peak uses the same media-left, project-story-right opening. */
+@media (min-width: 901px) {
+  .case-theme-peak {
+    position: relative;
+  }
+
+  .case-theme-peak > .page-breadcrumb {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    width: 39%;
+    margin: 0;
+    padding: 30px 48px 0;
+    color: rgb(255 255 255 / 0.56);
+  }
+
+  .case-theme-peak > .page-breadcrumb a:hover {
+    color: #fff;
+  }
+
+  .case-theme-peak .case-peak-video-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 61%) minmax(360px, 39%);
+    min-height: 100svh;
+    background: #111;
+  }
+
+  .case-theme-peak .case-peak-hero-top {
+    grid-column: 2;
+    grid-row: 1;
+    min-height: 100svh;
+    padding: clamp(160px, 18vw, 240px) clamp(36px, 4vw, 68px) 54px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #111;
+    color: #fff;
+  }
+
+  .case-theme-peak .case-peak-hero-top .case-editorial-eyebrow,
+  .case-theme-peak .case-peak-hero-top h1,
+  .case-theme-peak .case-peak-hero-top h1 span {
+    color: #fff;
+  }
+
+  .case-theme-peak .case-peak-hero-top .case-editorial-eyebrow {
+    color: rgb(255 255 255 / 0.62);
+  }
+
+  .case-theme-peak .case-peak-hero-top h1 {
+    font-size: clamp(3rem, 5.4vw, 6.1rem);
+    line-height: 0.92;
+  }
+
+  .case-theme-peak .case-peak-video-stage {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: 100svh;
+  }
+
+  .case-theme-peak .case-peak-video-stage::after {
+    background: rgb(20 97 91 / 0.18);
+  }
+
+  .case-theme-peak .case-peak-hero-bottom {
+    grid-column: 1 / -1;
+    padding: clamp(78px, 10vw, 150px) var(--case-inline-gutter);
+    background: #fbfbf8;
+  }
+}
