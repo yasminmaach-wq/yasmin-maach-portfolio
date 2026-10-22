@@ -6298,8 +6298,8 @@ body.case-page .site-nav {
 /* Position the projects animation at the same hero/section boundary as on Home. */
 .work-header {
   min-height: 100vh;
-  overflow: visible;
-  clip-path: none;
+  overflow: visible !important;
+  clip-path: none !important;
   position: relative;
   z-index: 20;
   display: flex;
@@ -6313,7 +6313,7 @@ body.case-page .site-nav {
 }
 
 .work-header .hero-corner-animation {
-  z-index: 30;
+  z-index: 30 !important;
 }
 
 .projects-list-label,
