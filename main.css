@@ -7207,14 +7207,26 @@ body.case-page .case-editorial-hero h1 span {
   position: absolute;
   top: 2rem;
   right: clamp(2rem, 4vw, 4.25rem);
-  color: rgb(255 255 255 / .65);
-  font-size: .76rem;
-  letter-spacing: .08em;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background: #fff;
+  color: #11110f;
+  font-size: 1.7rem;
+  line-height: 1;
   text-decoration: none;
-  text-transform: uppercase;
+  transition: background-color .2s ease, color .2s ease;
 }
 
 .project-detail-back:hover,
+.project-detail-back:focus-visible {
+  background: #11110f;
+  color: #fff;
+}
+
 .project-detail-next:hover {
   color: #fff;
 }
