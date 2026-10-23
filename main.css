@@ -7213,18 +7213,19 @@ body.case-page .case-editorial-hero h1 span {
   height: 44px;
   border: 1px solid #fff;
   border-radius: 50%;
-  background: #fff;
-  color: #11110f;
+  background: #11110f;
+  color: #fff;
   font-size: 1.7rem;
   line-height: 1;
+  text-align: center;
   text-decoration: none;
   transition: background-color .2s ease, color .2s ease;
 }
 
 .project-detail-back:hover,
 .project-detail-back:focus-visible {
-  background: #11110f;
-  color: #fff;
+  background: #fff;
+  color: #11110f;
 }
 
 .project-detail-next:hover {
