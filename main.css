@@ -1365,7 +1365,7 @@ header,
   display: inline-block;
   color: #000;
   font-family: "Coda", system-ui;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .potrait-img-link .brand-wordmark {
@@ -1373,9 +1373,9 @@ header,
   align-items: center;
   font-family: "Coda", system-ui;
   font-size: 2.25rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1;
-  letter-spacing: -0.055em;
+  letter-spacing: -0.035em;
   text-transform: uppercase;
   perspective: 240px;
 }
