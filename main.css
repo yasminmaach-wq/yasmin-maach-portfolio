@@ -7153,6 +7153,7 @@ body.case-page .case-editorial-hero h1 span {
 /* Standalone project details: a focused media-and-story layout. */
 .project-detail-page {
   margin: 0;
+  padding-top: 0;
   background: #11110f;
   color: #f8f8f3;
 }
