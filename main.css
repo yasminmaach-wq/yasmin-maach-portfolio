@@ -6749,6 +6749,7 @@ body.case-page .case-editorial-hero {
   color: #111;
   font-size: clamp(27px, 2.35vw, 40px);
   line-height: 1;
+  text-transform: none;
 }
 
 .work-page .project-year {
