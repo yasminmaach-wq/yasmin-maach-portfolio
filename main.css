@@ -7296,6 +7296,20 @@ body.case-page .case-editorial-hero h1 span {
   text-transform: none;
 }
 
+/* A quieter, editorial project introduction for Every Peak. */
+.project-detail--peak .project-detail-description {
+  max-width: 33rem;
+  margin-top: clamp(2rem, 4vw, 3.5rem);
+  padding-top: clamp(1rem, 1.8vw, 1.5rem);
+  border-top: 1px solid rgb(255 255 255 / .12);
+  color: rgb(255 255 255 / .64);
+  font-family: "Coda", sans-serif;
+  font-size: clamp(.84rem, 1.05vw, 1rem);
+  font-weight: 400;
+  line-height: 1.58;
+  letter-spacing: -.015em;
+}
+
 .project-detail-title {
   max-width: 9ch;
   margin: 0;
