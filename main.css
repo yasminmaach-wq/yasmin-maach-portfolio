@@ -7159,10 +7159,14 @@ body.case-page .case-editorial-hero h1 span {
 
 .project-detail-page main {
   min-height: 100svh;
+  margin: 0;
+  padding: 0;
 }
 
 .project-detail {
   min-height: 100svh;
+  margin: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: minmax(0, 61%) minmax(360px, 39%);
   background: #11110f;
