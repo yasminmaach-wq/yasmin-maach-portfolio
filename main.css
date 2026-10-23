@@ -6746,6 +6746,36 @@ body.case-page .case-editorial-hero {
   line-height: 1.2;
 }
 
+/* Keep actions and supporting headings in the display typeface. */
+button,
+.button-link,
+.site-nav a.nav-cta,
+.about-cta-button,
+.work-cta-button,
+.service-cta-button,
+.contact-form button,
+.project-chips button {
+  font-family: "Coda", system-ui;
+  font-weight: 800;
+}
+
+h3,
+.hero-text p,
+header .hero-subtitle,
+.hero-role-focus,
+.services-hero-subtitle,
+.project-category,
+.resume-eyebrow,
+.resume-block > h3,
+.resume-facts dt,
+.resume-quote-label,
+.resume-period,
+.about-scroll-link span,
+.about-portrait-link-label,
+.agb-content > h2 {
+  font-family: "Coda", system-ui;
+}
+
 .work-page .project-content h2 {
   margin: 0 0 10px;
   color: #111;
