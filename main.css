@@ -6746,6 +6746,17 @@ body.case-page .case-editorial-hero {
   font-size: clamp(27px, 2.35vw, 40px);
 }
 
+.work-page .project-year {
+  display: block;
+  margin-top: -6px;
+  color: rgba(0, 0, 0, 0.55);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: .72rem;
+  letter-spacing: .03em;
+  line-height: 1.3;
+  transition: color .35s ease;
+}
+
 .work-page .project-content p {
   margin-bottom: 18px;
   color: #111;
@@ -6770,6 +6781,7 @@ body.case-page .case-editorial-hero {
 }
 
 .work-page .project-item:hover .project-category,
+.work-page .project-item:hover .project-year,
 .work-page .project-item:hover .project-tags span {
   border-color: rgba(255, 255, 255, 0.45);
   color: rgba(255, 255, 255, 0.58);
