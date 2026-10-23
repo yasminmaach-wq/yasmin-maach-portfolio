@@ -6616,10 +6616,11 @@ body.case-page .case-editorial-hero {
 .work-page .projects-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0;
-  padding: 0 25px 25px;
+  gap: 1px;
+  margin: 0 25px 25px;
+  padding: 0;
   border: 1px solid #000;
-  border-bottom: 0;
+  background: #000;
 }
 
 .work-page .project-item {
@@ -6632,13 +6633,7 @@ body.case-page .case-editorial-hero {
   overflow: hidden;
   isolation: isolate;
   border: 0;
-  border-right: 1px solid #000;
-  border-bottom: 1px solid #000;
   background: #f8f7f4;
-}
-
-.work-page .project-item:nth-child(2n) {
-  border-right: 0;
 }
 
 .work-page .project-item::before,
@@ -6802,8 +6797,7 @@ body.case-page .case-editorial-hero {
 @media (max-width: 640px) {
   .work-page .projects-list {
     grid-template-columns: 1fr;
-    gap: 0;
-    padding: 0 24px 24px;
+    margin: 0 24px 24px;
   }
 
   .work-page .project-item,
@@ -6813,7 +6807,6 @@ body.case-page .case-editorial-hero {
 
   .work-page .project-item {
     aspect-ratio: auto;
-    border-right: 0;
   }
 
   .work-page .project-item > .project-content {
