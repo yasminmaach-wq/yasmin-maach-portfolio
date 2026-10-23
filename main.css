@@ -6726,7 +6726,7 @@ body.case-page .case-editorial-hero {
   max-width: none;
   min-height: 100%;
   height: 100%;
-  padding: clamp(24px, 2.5vw, 34px);
+  padding: clamp(24px, 2.5vw, 34px) clamp(24px, 2.5vw, 34px) clamp(52px, 4vw, 64px);
   pointer-events: none;
 }
 
