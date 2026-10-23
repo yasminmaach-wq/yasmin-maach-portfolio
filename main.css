@@ -2058,7 +2058,7 @@ header > p.col-lg-8 {
 
 header .hero-subtitle {
   font-family: "Manrope", sans-serif;
-  font-size: clamp(1.3rem, 2.4vw, 2rem);
+  font-size: clamp(1.15rem, 2.1vw, 1.75rem);
   font-weight: 300;
   line-height: 1.25;
   margin: 18px 0 0;
@@ -3655,7 +3655,7 @@ div .skills-section {
 }
 
 .hero-text p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.7;
   color: #000;
 }
@@ -4113,7 +4113,7 @@ div .skills-section {
   max-width: 620px;
   margin: 0 0 24px;
   font-family: "Manrope", sans-serif;
-  font-size: clamp(1.3rem, 2.4vw, 2rem);
+  font-size: clamp(1.15rem, 2.1vw, 1.75rem);
   font-weight: 300;
   line-height: 1.25;
   text-transform: none;
