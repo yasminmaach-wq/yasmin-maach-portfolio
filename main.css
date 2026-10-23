@@ -1371,9 +1371,9 @@ header,
 .potrait-img-link .brand-wordmark {
   display: inline-flex;
   align-items: center;
-  font-family: "Manrope", sans-serif;
+  font-family: "Coda", system-ui;
   font-size: 2.25rem;
-  font-weight: 800;
+  font-weight: 400;
   line-height: 1;
   letter-spacing: -0.055em;
   text-transform: uppercase;
