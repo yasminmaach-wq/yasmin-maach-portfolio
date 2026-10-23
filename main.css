@@ -193,7 +193,7 @@ h1 {
   margin-bottom: 14px;
   color: var(--case-accent);
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -1373,9 +1373,9 @@ header,
   align-items: center;
   font-family: "Coda", system-ui;
   font-size: 2.25rem;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.015em;
   text-transform: uppercase;
   perspective: 240px;
 }
