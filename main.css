@@ -6733,7 +6733,8 @@ body.case-page .case-editorial-hero {
   justify-content: flex-end;
   width: 100%;
   max-width: none;
-  min-height: clamp(430px, 43vw, 590px);
+  min-height: 100%;
+  height: 100%;
   padding: 28px;
   pointer-events: none;
 }
