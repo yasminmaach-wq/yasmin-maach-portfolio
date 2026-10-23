@@ -7273,6 +7273,91 @@ body.case-page .case-editorial-hero h1 span {
 .project-detail--commerce { --project-surface: #eee8df; }
 .project-detail--peak { --project-surface: #dfe8e0; }
 
+/* Every Peak uses the same two animated app previews as its project card. */
+.project-detail--peak .project-detail-media {
+  display: grid;
+  place-items: center;
+  padding: clamp(1.5rem, 4vw, 4rem);
+  background: #fff;
+}
+
+.project-detail-phone-preview {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(.75rem, 1.5vw, 1.5rem);
+}
+
+.project-detail-phone {
+  position: relative;
+  display: block;
+  width: min(34%, 275px);
+  padding: clamp(3px, .35vw, 5px);
+  border: clamp(2px, .34vw, 4px) solid #111513;
+  border-radius: clamp(28px, 3.4vw, 48px);
+  background: linear-gradient(110deg, #090b0a, #38413d 52%, #090b0a);
+  box-shadow: 0 22px 38px rgb(0 0 0 / .22), inset 0 0 0 1px rgb(255 255 255 / .2);
+  overflow: hidden;
+}
+
+.project-detail-phone::before,
+.project-detail-phone::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: clamp(2px, .28vw, 4px);
+  border-radius: 99px;
+  background: #111513;
+}
+
+.project-detail-phone::before {
+  top: 19%;
+  left: clamp(-5px, -.5vw, -3px);
+  height: 12%;
+  box-shadow: 0 clamp(23px, 3vw, 34px) 0 #111513;
+}
+
+.project-detail-phone::after {
+  top: 29%;
+  right: clamp(-5px, -.5vw, -3px);
+  height: 16%;
+}
+
+.project-detail-phone-island {
+  position: absolute;
+  z-index: 2;
+  top: clamp(7px, .9vw, 11px);
+  left: 50%;
+  width: 40%;
+  height: clamp(10px, 1.2vw, 15px);
+  transform: translateX(-50%);
+  border-radius: 99px;
+  background: #080808;
+}
+
+.project-detail-media .project-detail-phone video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 888 / 1920;
+  object-fit: cover;
+  border-radius: clamp(24px, 3vw, 42px);
+  background: #dbe4e4;
+  transition: none;
+}
+
+.project-detail:hover .project-detail-phone video {
+  transform: none;
+}
+
+.project-detail-phone-logo {
+  width: min(18%, 132px);
+  height: auto;
+  filter: drop-shadow(0 8px 10px rgb(24 55 52 / .16));
+}
+
 @media (max-width: 900px) {
   .project-detail {
     grid-template-columns: 1fr;
@@ -7291,6 +7376,14 @@ body.case-page .case-editorial-hero h1 span {
   .project-detail-back {
     top: 1.5rem;
     right: 1.5rem;
+  }
+
+  .project-detail--peak .project-detail-media {
+    padding: 1rem;
+  }
+
+  .project-detail-phone {
+    width: min(37%, 215px);
   }
 }
 
