@@ -7334,6 +7334,7 @@ body.case-page .case-editorial-hero h1 span {
 .project-detail-phone-preview {
   width: 100%;
   height: 100%;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7402,10 +7403,12 @@ body.case-page .case-editorial-hero h1 span {
   transform: none;
 }
 
-.project-detail-phone-logo {
+.project-detail-media .project-detail-phone-logo {
   width: min(18%, 132px);
   height: auto;
+  object-fit: contain;
   filter: drop-shadow(0 8px 10px rgb(24 55 52 / .16));
+  transition: none;
 }
 
 @media (max-width: 900px) {
