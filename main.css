@@ -7241,6 +7241,10 @@ body.case-page .case-editorial-hero h1 span {
   text-transform: uppercase;
 }
 
+.project-detail--peak .project-detail-kicker {
+  text-transform: none;
+}
+
 .project-detail-title {
   max-width: 9ch;
   margin: 0;
