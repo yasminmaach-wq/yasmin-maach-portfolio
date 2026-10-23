@@ -7273,6 +7273,33 @@ body.case-page .case-editorial-hero h1 span {
 .project-detail--commerce { --project-surface: #eee8df; }
 .project-detail--peak { --project-surface: #dfe8e0; }
 
+/* Keep the project-page cursor visible even if a browser delays its script. */
+.project-detail-page .site-cursor {
+  display: flex !important;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgb(0 0 0 / .8), 0 2px 12px rgb(0 0 0 / .35);
+  mix-blend-mode: normal;
+}
+
+.project-detail-page .site-cursor.is-active {
+  width: 44px;
+  height: 44px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-detail-page:not(:has(.site-cursor)),
+  .project-detail-page:not(:has(.site-cursor)) * {
+    cursor: auto !important;
+  }
+
+  .project-detail-page:not(:has(.site-cursor)) a,
+  .project-detail-page:not(:has(.site-cursor)) button {
+    cursor: pointer !important;
+  }
+}
+
 /* Every Peak uses the same two animated app previews as its project card. */
 .project-detail--peak .project-detail-media {
   display: grid;
