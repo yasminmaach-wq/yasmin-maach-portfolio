@@ -273,7 +273,7 @@ h1 {
   margin: 0;
   color: #bddbbf;
   font-size: 0.78rem;
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: 0.13em;
   text-transform: uppercase;
 }
@@ -1376,8 +1376,6 @@ header,
   font-weight: 900;
   line-height: 1;
   letter-spacing: 0.03em;
-  -webkit-text-stroke: 0.25px currentColor;
-  text-stroke: 0.25px currentColor;
   text-transform: uppercase;
   perspective: 240px;
 }
