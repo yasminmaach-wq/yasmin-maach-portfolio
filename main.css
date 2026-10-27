@@ -7296,6 +7296,10 @@ body.case-page .case-editorial-hero h1 span {
   text-transform: none;
 }
 
+.project-detail--sport .project-detail-kicker {
+  text-transform: none;
+}
+
 /* A quieter, editorial project introduction for Every Peak. */
 .project-detail--peak .project-detail-description {
   max-width: 33rem;
