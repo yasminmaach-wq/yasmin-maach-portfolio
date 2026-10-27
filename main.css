@@ -1372,7 +1372,8 @@ header,
   display: inline-flex;
   align-items: center;
   font-family: "Coda", system-ui;
-  font-size: 2.65rem;
+  /* Match the visual width of the adjacent primary navigation button. */
+  font-size: 1.3rem;
   font-weight: 800;
   line-height: 1;
   letter-spacing: 0.03em;
