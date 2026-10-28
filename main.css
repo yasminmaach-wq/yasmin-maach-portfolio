@@ -1373,7 +1373,7 @@ header,
   align-items: center;
   font-family: "Coda", system-ui;
   /* Match the visual width of the adjacent primary navigation button. */
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 800;
   line-height: 1;
   letter-spacing: 0.03em;
@@ -1448,7 +1448,7 @@ body.home-page .brand-letter {
   }
 
   .site-nav .potrait-img-link span {
-    font-size: 1.3rem;
+    font-size: 1rem;
     overflow: visible;
     white-space: nowrap;
   }
@@ -5668,7 +5668,7 @@ body.case-page .site-nav {
 
   body.case-page .site-nav .potrait-img-link span,
   body.case-page .site-nav .brand-wordmark {
-    font-size: 1.35rem;
+    font-size: 1rem;
   }
 
   .site-nav {
@@ -5679,7 +5679,7 @@ body.case-page .site-nav {
 
   .site-nav .potrait-img-link span,
   .site-nav .brand-wordmark {
-    font-size: 1.35rem;
+    font-size: 1rem;
   }
 }
 
