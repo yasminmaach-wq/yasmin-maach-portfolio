@@ -1381,6 +1381,11 @@ header,
   perspective: 240px;
 }
 
+/* Optically align the cap height of the wordmark with the navigation button. */
+.site-nav .brand-wordmark {
+  transform: translateY(0.12em);
+}
+
 .brand-letter {
   display: inline-block;
   transform-origin: center;
