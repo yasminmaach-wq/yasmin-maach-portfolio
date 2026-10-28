@@ -272,7 +272,7 @@ h1 {
 .case-peak-flow-header p {
   margin: 0;
   color: #bddbbf;
-  font-size: 1rem;
+  font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -1373,7 +1373,7 @@ header,
   align-items: center;
   font-family: "Coda", system-ui;
   /* Match the visual width of the adjacent primary navigation button. */
-  font-size: 0.78rem;
+  font-size: 1rem;
   font-weight: 800;
   line-height: 1;
   letter-spacing: 0.03em;
@@ -1515,7 +1515,7 @@ body.work-page .brand-letter {
   .site-nav-menu a {
     width: 100%;
     padding: 13px 0;
-    font-size: 1rem;
+    font-size: 0.78rem;
     letter-spacing: 0.02em;
     border-bottom: 1px solid rgba(146, 146, 146, 0.14);
   }
@@ -4161,7 +4161,7 @@ div .skills-section {
 
   .services-hero-content p {
     max-width: 310px;
-    font-size: 1rem;
+    font-size: 0.78rem;
   }
 
   .services-hero-animation {
