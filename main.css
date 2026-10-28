@@ -1373,7 +1373,7 @@ header,
   align-items: center;
   font-family: "Coda", system-ui;
   /* Match the visual width of the adjacent primary navigation button. */
-  font-size: 1rem;
+  font-size: 0.78rem;
   font-weight: 800;
   line-height: 1;
   letter-spacing: 0.03em;
@@ -1448,7 +1448,7 @@ body.home-page .brand-letter {
   }
 
   .site-nav .potrait-img-link span {
-    font-size: 1rem;
+    font-size: 0.78rem;
     overflow: visible;
     white-space: nowrap;
   }
@@ -1510,7 +1510,7 @@ body.home-page .brand-letter {
   .site-nav-menu a {
     width: 100%;
     padding: 13px 0;
-    font-size: 1rem;
+    font-size: 0.78rem;
     letter-spacing: 0.02em;
     border-bottom: 1px solid rgba(146, 146, 146, 0.14);
   }
@@ -4156,7 +4156,7 @@ div .skills-section {
 
   .services-hero-content p {
     max-width: 310px;
-    font-size: 1rem;
+    font-size: 0.78rem;
   }
 
   .services-hero-animation {
