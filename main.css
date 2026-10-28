@@ -1707,19 +1707,42 @@ body.menu-open {
 
 .site-nav > .potrait-img-link,
 .site-nav > .nav-cta,
+.site-nav > .nav-monogram,
 .site-nav > .language-switcher,
 .site-nav > .site-nav-toggle {
   position: relative;
   z-index: 3;
 }
 
-/* Die Sprachwahl sitzt als sekundäre Aktion direkt unter dem Menübutton. */
-.site-nav > .language-switcher {
+/* Das Monogramm sitzt als sekundäre Markierung direkt unter dem Menübutton. */
+.site-nav > .nav-monogram {
   position: absolute;
   top: 84px;
   right: 25px;
   z-index: 4;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
   margin: 0;
+  background: #000;
+  color: #fff !important;
+  font-family: "Coda", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.site-nav > .nav-monogram:hover,
+.site-nav > .nav-monogram:focus-visible {
+  background: #242424;
+  color: #fff;
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+  transform: translateY(-2px);
 }
 
 .language-switcher summary {
@@ -1752,13 +1775,13 @@ body.menu-open {
 }
 
 @media (max-width: 1199.98px) {
-  .site-nav > .language-switcher {
+  .site-nav > .nav-monogram {
     right: 32px;
   }
 }
 
 @media (max-width: 767.98px) {
-  .site-nav > .language-switcher {
+  .site-nav > .nav-monogram {
     right: 32px;
   }
 }
