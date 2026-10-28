@@ -272,7 +272,7 @@ h1 {
 .case-peak-flow-header p {
   margin: 0;
   color: #bddbbf;
-  font-size: 0.78rem;
+  font-size: 1rem;
   font-weight: 800;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -1393,6 +1393,11 @@ body.home-page .brand-letter {
   animation: none;
 }
 
+/* Keep the project overview wordmark at a stable, button-width proportion. */
+body.work-page .brand-letter {
+  animation: none;
+}
+
 @keyframes brand-letter-flip {
   0%,
   48%,
@@ -1448,7 +1453,7 @@ body.home-page .brand-letter {
   }
 
   .site-nav .potrait-img-link span {
-    font-size: 0.78rem;
+    font-size: 1rem;
     overflow: visible;
     white-space: nowrap;
   }
@@ -1510,7 +1515,7 @@ body.home-page .brand-letter {
   .site-nav-menu a {
     width: 100%;
     padding: 13px 0;
-    font-size: 0.78rem;
+    font-size: 1rem;
     letter-spacing: 0.02em;
     border-bottom: 1px solid rgba(146, 146, 146, 0.14);
   }
@@ -4156,7 +4161,7 @@ div .skills-section {
 
   .services-hero-content p {
     max-width: 310px;
-    font-size: 0.78rem;
+    font-size: 1rem;
   }
 
   .services-hero-animation {
