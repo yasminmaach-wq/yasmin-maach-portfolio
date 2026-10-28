@@ -1373,7 +1373,7 @@ header,
   align-items: center;
   font-family: "Coda", system-ui;
   /* Match the height of the adjacent primary navigation button. */
-  font-size: 3rem;
+  font-size: 2.65rem;
   font-weight: 800;
   line-height: 1;
   letter-spacing: 0.03em;
@@ -1453,7 +1453,7 @@ body.work-page .brand-letter {
   }
 
   .site-nav .potrait-img-link span {
-    font-size: 3rem;
+    font-size: 2.65rem;
     overflow: visible;
     white-space: nowrap;
   }
