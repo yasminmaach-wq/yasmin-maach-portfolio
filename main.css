@@ -7382,7 +7382,7 @@ body.case-page .case-editorial-hero h1 span {
   font-weight: 400;
   line-height: 1;
   letter-spacing: .075em;
-  text-transform: uppercase;
+  text-transform: uppercase !important;
 }
 
 .project-detail-description {
