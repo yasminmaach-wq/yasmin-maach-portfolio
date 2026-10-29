@@ -1383,7 +1383,7 @@ header,
 
 /* Optically align the cap height of the wordmark with the navigation button. */
 .site-nav .brand-wordmark {
-  transform: translateY(0.12em);
+  transform: translateY(0.06em);
 }
 
 .brand-letter {
