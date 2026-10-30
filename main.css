@@ -951,7 +951,6 @@ select {
   border-radius: 50%;
   background: #fff;
   color: #000;
-  mix-blend-mode: difference;
   opacity: 0;
   pointer-events: none;
   transform: translate(-50%, -50%);
@@ -970,6 +969,11 @@ select {
   height: 44px;
 }
 
+.site-cursor.is-on-light {
+  background: #000;
+  color: #fff;
+}
+
 .site-cursor-label {
   color: #000;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -985,6 +989,10 @@ select {
   opacity: 1;
 }
 
+.site-cursor.is-on-light .site-cursor-label {
+  color: #fff;
+}
+
 /* Subtle motion trail that automatically inverts against the page background. */
 .cursor-trail-dot {
   position: fixed;
@@ -995,7 +1003,6 @@ select {
   height: 13px;
   border-radius: 50%;
   background: #fff;
-  mix-blend-mode: difference;
   opacity: 0;
   pointer-events: none;
   transform: translate(-50%, -50%) scale(var(--cursor-trail-scale));
@@ -1008,6 +1015,10 @@ select {
 
 .cursor-trail-dot.is-suppressed {
   opacity: 0;
+}
+
+.cursor-trail-dot.is-on-light {
+  background: #000;
 }
 
 @media (hover: hover) and (pointer: fine) {

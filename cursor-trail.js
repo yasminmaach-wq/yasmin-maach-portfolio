@@ -4,6 +4,21 @@
 
   if (!finePointer.matches || reducedMotion.matches) return;
 
+  const isLightSurface = (target) => {
+    let element = target instanceof Element ? target : document.body;
+
+    while (element) {
+      const values = window.getComputedStyle(element).backgroundColor.match(/[\d.]+/g)?.map(Number);
+      if (values && values.length >= 3 && (values[3] ?? 1) > 0.05) {
+        const brightness = values[0] * 0.299 + values[1] * 0.587 + values[2] * 0.114;
+        return brightness > 150;
+      }
+      element = element.parentElement;
+    }
+
+    return false;
+  };
+
   const trailLength = 9;
   const trail = [];
   const interactiveSelector = "a, button, summary, [role='button'], input[type='button'], input[type='submit']";
@@ -41,8 +56,12 @@
     pointerX = event.clientX;
     pointerY = event.clientY;
     const isInteractive = event.target instanceof Element && Boolean(event.target.closest(interactiveSelector));
+    const isOnLightSurface = isLightSurface(event.target);
 
-    trail.forEach((dot) => dot.element.classList.toggle("is-suppressed", isInteractive));
+    trail.forEach((dot) => {
+      dot.element.classList.toggle("is-suppressed", isInteractive);
+      dot.element.classList.toggle("is-on-light", isOnLightSurface);
+    });
 
     if (!hasPointerPosition) {
       trail.forEach((dot) => {
