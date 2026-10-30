@@ -7393,6 +7393,14 @@ body.case-page .case-editorial-hero h1 span {
   text-transform: uppercase !important;
 }
 
+.project-detail-year {
+  margin: .65rem 0 0;
+  color: rgb(255 255 255 / .62);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: clamp(.72rem, .9vw, .88rem);
+  letter-spacing: .05em;
+}
+
 .project-detail-description {
   max-width: 34rem;
   margin: .75rem 0 0;
