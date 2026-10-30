@@ -985,6 +985,27 @@ select {
   opacity: 1;
 }
 
+/* Subtle motion trail for the custom cursor, using the existing burgundy accent. */
+.cursor-trail-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #591e21;
+  box-shadow: 0 0 16px rgb(89 30 33 / 0.32);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(var(--cursor-trail-scale));
+  transition: opacity 0.18s ease;
+}
+
+.cursor-trail-dot.is-visible {
+  opacity: var(--cursor-trail-opacity);
+}
+
 @media (hover: hover) and (pointer: fine) {
   html,
   body,
@@ -995,6 +1016,10 @@ select {
 
 @media (hover: none), (pointer: coarse) {
   .site-cursor {
+    display: none !important;
+  }
+
+  .cursor-trail-dot {
     display: none !important;
   }
 }
