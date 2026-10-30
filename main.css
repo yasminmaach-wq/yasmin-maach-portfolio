@@ -985,7 +985,7 @@ select {
   opacity: 1;
 }
 
-/* Subtle motion trail for the custom cursor, using the existing burgundy accent. */
+/* Subtle motion trail that automatically inverts against the page background. */
 .cursor-trail-dot {
   position: fixed;
   top: 0;
@@ -994,8 +994,8 @@ select {
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: #591e21;
-  box-shadow: 0 0 16px rgb(89 30 33 / 0.32);
+  background: #fff;
+  mix-blend-mode: difference;
   opacity: 0;
   pointer-events: none;
   transform: translate(-50%, -50%) scale(var(--cursor-trail-scale));
