@@ -7420,6 +7420,17 @@ body.case-page .case-editorial-hero h1 span {
   color: #11110f;
 }
 
+.project-detail-cta--coming-soon:disabled {
+  cursor: default;
+  opacity: .72;
+}
+
+.project-detail-cta--coming-soon:disabled:hover {
+  border-color: rgb(255 255 255 / .32);
+  background: transparent;
+  color: #fff;
+}
+
 .project-detail-links {
   display: flex;
   justify-content: space-between;
