@@ -1006,6 +1006,10 @@ select {
   opacity: var(--cursor-trail-opacity);
 }
 
+.cursor-trail-dot.is-suppressed {
+  opacity: 0;
+}
+
 @media (hover: hover) and (pointer: fine) {
   html,
   body,

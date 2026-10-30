@@ -383,6 +383,7 @@
   if (finePointer.matches && !reducedMotion.matches && !document.querySelector(".cursor-trail-dot")) {
     const trail = [];
     const trailLength = 9;
+    const interactiveSelector = "a, button, summary, [role='button'], input[type='button'], input[type='submit']";
     let pointerX = 0;
     let pointerY = 0;
     let hasPointerPosition = false;
@@ -415,6 +416,9 @@
     window.addEventListener("pointermove", (event) => {
       pointerX = event.clientX;
       pointerY = event.clientY;
+      const isInteractive = event.target instanceof Element && Boolean(event.target.closest(interactiveSelector));
+
+      trail.forEach((dot) => dot.element.classList.toggle("is-suppressed", isInteractive));
 
       if (!hasPointerPosition) {
         trail.forEach((dot) => {
