@@ -974,6 +974,14 @@ select {
   color: #fff;
 }
 
+/* The expanded cursor keeps the original high-contrast inversion effect. */
+.site-cursor.is-active,
+.site-cursor.is-active.is-on-light {
+  background: #fff;
+  color: #000;
+  mix-blend-mode: difference;
+}
+
 .site-cursor-label {
   color: #000;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -991,6 +999,10 @@ select {
 
 .site-cursor.is-on-light .site-cursor-label {
   color: #fff;
+}
+
+.site-cursor.is-active .site-cursor-label {
+  color: #000;
 }
 
 /* Subtle motion trail that automatically inverts against the page background. */
