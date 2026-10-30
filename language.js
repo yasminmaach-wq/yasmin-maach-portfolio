@@ -349,6 +349,9 @@
   const isLightSurface = (target) => {
     let element = target instanceof Element ? target : document.body;
 
+    // The home hero uses a dark pseudo-element, so its transparent header needs an explicit dark surface.
+    if (element.closest("body.home-page > header")) return false;
+
     while (element) {
       const values = window.getComputedStyle(element).backgroundColor.match(/[\d.]+/g)?.map(Number);
       if (values && values.length >= 3 && (values[3] ?? 1) > 0.05) {
