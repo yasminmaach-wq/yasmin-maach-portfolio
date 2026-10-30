@@ -1029,6 +1029,11 @@ select {
   opacity: 0;
 }
 
+/* An expanded cursor is a self-contained interaction state, without a dot inside it. */
+body:has(.site-cursor.is-active) .cursor-trail-dot {
+  opacity: 0 !important;
+}
+
 .cursor-trail-dot.is-on-light {
   background: #000;
 }
