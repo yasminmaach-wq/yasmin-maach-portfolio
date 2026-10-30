@@ -6686,6 +6686,14 @@ body.case-page .case-editorial-hero {
   background: linear-gradient(to top, rgba(248, 247, 244, 0.97) 0%, rgba(248, 247, 244, 0.62) 47%, transparent 100%);
 }
 
+.work-page .project-item--avyronpro {
+  background: #fff;
+}
+
+.work-page .project-item--avyronpro::before {
+  background: linear-gradient(to top, rgb(255 255 255 / .97) 0%, rgb(255 255 255 / .62) 47%, transparent 100%);
+}
+
 .work-page .project-item::after {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.16) 58%, transparent 100%);
   opacity: 0;
